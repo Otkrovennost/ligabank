@@ -1,0 +1,13 @@
+a {
+  color: inherit;
+  text-decoration-skip-ink: none;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: color, background-color, opacity, border-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
