@@ -1,3 +1,11 @@
+body {
+  min-width: 1366px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: $font-base;
+}
+
 a {
   color: inherit;
   text-decoration-skip-ink: none;

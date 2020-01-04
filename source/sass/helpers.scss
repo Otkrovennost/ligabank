@@ -16,7 +16,13 @@
 }
 
 .container {
-  width: 1160px;
+  width: 1024px;
   margin-right: auto;
   margin-left: auto;
+
+  @media ($desktop-plus) {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
