@@ -16,13 +16,16 @@
 }
 
 .container {
-  width: 1024px;
+  width: 1170px;
   margin-right: auto;
   margin-left: auto;
 
-  @media ($desktop-plus) {
-    width: 1170px;
-    margin-right: auto;
-    margin-left: auto;
+  @media($tablet) {
+    width: 678px;
+  }
+
+  @media($mobile) {
+    width: auto;
+    margin: 0 15px;
   }
 }

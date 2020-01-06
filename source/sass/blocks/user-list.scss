@@ -1,0 +1,31 @@
+.user-list {
+  padding: 10px 0 10px 30px;
+
+  a {
+    position: relative;
+  }
+
+  svg {
+    position: absolute;
+    top: -3px;
+    left: -30px;
+
+    @media($tablet) {
+      top: 2px;
+      left: -20px;
+    }
+
+    @media($mobile) {
+      top: -2px;
+      left: -14px;
+      width: 15px;
+      height: 16px;
+    }
+  }
+
+  span {
+    @media($tablet) {
+      display: none;
+    }
+  }
+}

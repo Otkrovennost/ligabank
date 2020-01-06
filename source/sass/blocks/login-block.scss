@@ -1,0 +1,152 @@
+.login-block {
+  position: relative;
+  width: 544px;
+  background-color: $color-bg-base;
+
+  @media($tablet) {
+    width: 678px;
+  }
+
+  @media($mobile) {
+    width: 290px;
+  }
+}
+
+.login-block form {
+  padding: 60px;
+
+  @media($tablet) {
+    padding: 60px 88px;
+  }
+
+  @media($mobile) {
+    padding: 50px 20px;
+  }
+
+  > a {
+    display: block;
+    margin-bottom: 38px;
+
+    @media($mobile) {
+      margin-bottom: 28px;
+    }
+  }
+
+  fieldset {
+    margin-bottom: 27px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 19px;
+    border: 0;
+
+    @media($mobile) {
+      margin-bottom: 20px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 45px;
+
+      @media($mobile) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #1F1E25;
+    border-radius: 4px;
+  }
+
+  button {
+    width: 100%;
+    padding: 22px 186px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    border: 0;
+    border-radius: 4px;
+    background-color: #2C36F2;
+
+    @media($mobile) {
+      padding: 18px 105px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+.login-block__forgot-password {
+  display: none;
+
+  @media($mobile) {
+    display: block;
+    padding-top: 12px;
+    text-align: center;
+    color: $color-lighter;
+
+
+  }
+}
+
+.login-block__forgot-password a[href] {
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.login-block__closer {
+  position: absolute;
+  z-index: 3;
+  top: 60px;
+  right: 55px;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+
+  @media($tablet) {
+    right: 87px;
+  }
+
+  @media($mobile) {
+    top: 49px;
+    right: 12px;
+  }
+
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -5px;
+    width: 28px;
+    height: 2px;
+    background-color:#1F1E25;
+
+    @media($mobile) {
+      right: 0;
+      width: 18px;
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

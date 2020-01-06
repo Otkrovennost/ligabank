@@ -1,13 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  min-width: 1366px;
+  min-width: 100%;
   margin: 0;
   font-size: 16px;
   line-height: 19px;
   font-family: $font-base;
+
+  @media($tablet) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 a {
   color: inherit;
+  text-decoration: none;
   text-decoration-skip-ink: none;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;

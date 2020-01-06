@@ -7,12 +7,79 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ligabank</title>
   <link rel="preload" href="fonts/roboto.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotomedium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/robotobold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page">
-  <h1>Лига Банк</h1>
+  <h1 class="visually-hidden">Лига Банк</h1>
+  <header class="header">
+    <nav class="header__nav nav nav--nojs">
+      <div class="nav__wrapper">
+        <button class="nav__toggler">
+          <span class="visually-hidden">Показать или скрыть меню</span>
+        </button>
+        <a>
+          <img src="img/logo.svg" width="150" height="27" alt="Логотип Лига Банк">
+        </a>
+        <ul class="nav__list page__list">
+          <li class="nav__item">
+            <a href="#">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Рассчитать кредит</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Задать вопрос</a>
+          </li>
+        </ul>
+        <!-- <ul class="nav__user-list user-list page__list">
+          <li class="user-list__item">
+            <a href="#">
+              <svg width="20" height="22">
+                <use xlink:href="img/sprite_auto.svg#icon-login"></use>
+              </svg>
+              <span>Войти в Интернет-банк</span>
+            </a>
+          </li>
+        </ul> -->
+        <div class="nav__user-list user-list">
+          <a href="#">
+            <svg width="20" height="22">
+              <use xlink:href="img/sprite_auto.svg#icon-login"></use>
+            </svg>
+            <span>Войти в Интернет-банк</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="login-block">
+    <form method="post" action="#">
+      <h2 class="visually-hidden">Авторизация</h2>
+      <a>
+        <img src="img/logo-popup.svg" width="150" height="27" alt="Логотип Лига Банк">
+      </a>
+      <fieldset>
+        <label for="login">Логин</label>
+        <input name="name" id="login" type="text" required>
+      </fieldset>
+      <fieldset>
+        <label for="password">Пароль</label>
+        <input id="password" type="text" required>
+      </fieldset>
+      <button type="submit">Войти</button>
+      <div class="login-block__forgot-password">
+        <a href="#">Забыли пороль?</a>
+      </div>
+    </form>
+    <button class="login-block__closer" type="button" aria-label="Закрыть окно"></button>
+  </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

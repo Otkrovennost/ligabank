@@ -1,0 +1,16 @@
+.header {
+  background-color: #F6F7FF;
+}
+
+.header__nav {
+  padding: 27px 0 34px;
+
+  @media($tablet) {
+    padding: 23px 0;
+  }
+
+  @media($mobile) {
+    position: relative;
+    padding: 8px 0;
+  }
+}
