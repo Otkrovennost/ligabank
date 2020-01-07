@@ -1,3 +1,24 @@
+@keyframes bounce {
+  0% {
+    transform: translate(0, -200px);
+  }
+  30% {
+    transform: translate(0, -150px);
+  }
+  50% {
+    transform: translate(0, -100px);
+  }
+  70% {
+    transform: translate(0, -50px);
+  }
+  90% {
+    transform: translate(0, -30px);
+  }
+  100% {
+    transform: translate(0, -15px);
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -27,7 +48,7 @@ a {
   text-decoration-skip-ink: none;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
-  transition-property: color, background-color, opacity, border-color;
+  transition-property: color,opacity,background-color,border-color,box-shadow;
 }
 
 img {

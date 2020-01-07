@@ -1,7 +1,10 @@
 root: true
 
 env:
+  es6: true
   browser: true
+  commonjs: true
 
-extends:
-  "htmlacademy/es5"
+extends: "htmlacademy/es6"
+
+parserOptions: "sourceType": module
