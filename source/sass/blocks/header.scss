@@ -1,15 +1,15 @@
 .header {
-  background-color: #F6F7FF;
+  background-color: #f6f7ff;
 }
 
 .header__nav {
   padding: 27px 0 34px;
 
-  @media($tablet) {
-    padding: 23px 0;
+  @media ($tablet) {
+    padding: 22px 0;
   }
 
-  @media($mobile) {
+  @media ($mobile) {
     position: relative;
     padding: 8px 0;
   }

@@ -1,46 +1,61 @@
-import { bodyBlock } from "./nav.js";
+const ESC_KEYCODE = 27;
+const popupElement = document.querySelector(`.popup`);
+const popupClose = popupElement.querySelector(`.popup__close`);
+const userName = popupElement.querySelector(`[name = login]`);
+const userPassword = popupElement.querySelector(`[name = password]`);
+const eyeIcon = popupElement.querySelector(`.login-block__icon`);
+let storageName = localStorage.getItem(`login`);
+let storagePassword = localStorage.getItem(`password`);
 
-const escKeycode = 27;
-let popupElement = document.querySelector('.popup');
-let popupClose = popupElement.querySelector('.popup__close');
-let userName = popupElement.querySelector("[name=name]");
-let eyeIcon = document.querySelector('.login-block__icon');
-let userPassword = document.querySelector("[name=password]");
-
-let popupCloserHandler = () => {
-  popupElement.classList.remove('popup--show');
-  bodyBlock.style.overflow = "auto";
+let SaveInLocalStorageHandler = () => {
+  if (userName.value || userPassword.value) {
+    localStorage.setItem(`login`, userName.value);
+    localStorage.setItem(`password`, userPassword.value);
+  }
 };
 
-let popupOpenHandler = () => {
-  if (popupElement) {
-    popupElement.classList.add('popup--show');
-    bodyBlock.style.overflow = "hidden";
-    userName.focus();
+let getInLocalStorage = () => {
+  if (storageName || storagePassword) {
+    userName.value = storageName;
+    userPassword.value = storagePassword;
   }
+};
 
-  popupClose.addEventListener('click', popupCloserHandler);
+let popupCloserHandler = () => {
+  popupElement.classList.remove(`popup--show`);
+};
 
-  document.addEventListener('keydown', (evt) => {
-    if (evt.keyCode === escKeycode) {
-      popupElement.classList.remove('popup--show');
-      bodyBlock.style.overflow = "auto";
+let closeByEsc = () => {
+  document.addEventListener(`keydown`, (evt) => {
+    if (evt.keyCode === ESC_KEYCODE) {
+      popupElement.classList.remove(`popup--show`);
     }
   });
 };
 
 let showPasswordHandler = (evt) => {
   evt.preventDefault();
-  userPassword.setAttribute('type', 'text');
+  userPassword.setAttribute(`type`, `text`);
 
   let onMouseUp = (upEvt) => {
     upEvt.preventDefault();
-    userPassword.setAttribute('type', 'password');
+    userPassword.setAttribute(`type`, `password`);
 
-    document.removeEventListener('mouseup', onMouseUp);
+    document.removeEventListener(`mouseup`, onMouseUp);
   };
 
-  document.addEventListener('mouseup', onMouseUp);
+  document.addEventListener(`mouseup`, onMouseUp);
 };
 
-export { escKeycode, eyeIcon, popupOpenHandler, showPasswordHandler }
+let popupOpenHandler = () => {
+  if (popupElement) {
+    popupElement.classList.add(`popup--show`);
+    userName.focus();
+    getInLocalStorage();
+  }
+
+  popupClose.addEventListener(`click`, popupCloserHandler);
+  closeByEsc();
+};
+
+export { eyeIcon, popupOpenHandler, SaveInLocalStorageHandler, showPasswordHandler }
