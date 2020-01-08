@@ -61,8 +61,12 @@
 .login-block__icon {
   position: absolute;
   bottom: 25px;
-  right: 15px;
+  right: 25px;
   cursor: pointer;
+
+  @media ($mobile) {
+    right: 17px;
+  }
 }
 
 .login-block form {
@@ -149,10 +153,10 @@
 .login-block__closer {
   position: absolute;
   z-index: 3;
-  top: 57px;
-  right: 56px;
-  width: 16px;
-  height: 16px;
+  top: 50px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   background-color: transparent;
   border: 0;
@@ -160,26 +164,26 @@
   cursor: pointer;
 
   @media ($tablet) {
-    right: 84px;
+    right: 77px;
   }
 
   @media ($mobile) {
-    top: 46px;
-    right: 12px;
+    top: 38px;
+    right: 8px;
   }
 
   &::after,
   &::before {
     content: "";
     position: absolute;
-    top: 7px;
-    right: -4px;
+    top: 14px;
+    right: 3px;
     width: 24px;
     height: 2px;
     background-color: #1f1e25;
 
     @media ($mobile) {
-      right: 0;
+      right: 5px;
       width: 18px;
     }
   }
@@ -190,5 +194,10 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 10px 3px $color-design;
   }
 }

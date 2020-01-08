@@ -33,6 +33,16 @@ let closeByEsc = () => {
   });
 };
 
+// let CloseOnClickOutsideHandler = (e) => {
+//   let target = e.target;
+//   let itsPopup = target === popupElement || popupElement.contains(target);
+//   let itsPopupActive = popupElement.classList.contains(`popup--show`);
+
+//   if (!itsPopup && itsPopupActive) {
+//     popupElement.classList.remove(`popup--show`);
+//   }
+// }
+
 let showPasswordHandler = (evt) => {
   evt.preventDefault();
   userPassword.setAttribute(`type`, `text`);
@@ -52,6 +62,7 @@ let popupOpenHandler = () => {
     popupElement.classList.add(`popup--show`);
     userName.focus();
     getInLocalStorage();
+    // document.addEventListener(`click`, CloseOnClickOutsideHandler);
   }
 
   popupClose.addEventListener(`click`, popupCloserHandler);

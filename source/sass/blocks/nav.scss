@@ -33,6 +33,7 @@
 
   @media ($tablet) {
     width: 133px;
+    margin-right: 45px;
   }
 
   @media ($mobile) {
@@ -116,13 +117,13 @@
   flex-grow: 1;
   width: 58%;
   margin: 0;
-  padding: 9px 0 0;
+  padding: 10px 0 0;
   list-style: none;
 
   @media ($tablet) {
     justify-content: space-between;
     margin-right: 53px;
-    padding: 4px 0 0 45px;
+    padding: 5px 0 0 0;
   }
 
   @media ($mobile) {
@@ -148,6 +149,7 @@
 
 .nav__link {
   margin-left: 25px;
+  padding: 0 0 10px 0;
 
   @media ($tablet) {
     margin-left: 20px;
