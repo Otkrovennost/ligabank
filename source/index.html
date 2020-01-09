@@ -18,7 +18,7 @@
     <nav class="header__nav nav nav--nojs nav__wrapper">
       <button class="nav__toggler" aria-label="Показать или скрыть меню">
       </button>
-      <a class="nav__logo">
+      <a class="nav__logo" aria-label="Логотип кампании">
         <img src="img/content/logo.svg" width="150" height="27" alt="Логотип Лига Банк">
       </a>
       <ul class="nav__list">
@@ -35,7 +35,7 @@
           <a class="nav__link" href="#">Задать вопрос</a>
         </li>
       </ul>
-      <a class="nav__user-link" href="#">
+      <a class="nav__user-link" href="#" aria-label="Авторизация">
         <svg width="20" height="22">
           <use xlink:href="img/sprite_auto.svg#icon-login"></use>
         </svg>
@@ -43,28 +43,30 @@
       </a>
     </nav>
   </header>
-  <section class="login-block popup">
-    <h2 class="visually-hidden">Авторизация</h2>
-    <form action="#">
-      <a class="login-block__logo">
-        <img src="img/content/logo-popup.svg" width="150" height="27" alt="Логотип Лига Банк">
-      </a>
-      <div class="login-block__item">
-        <label for="login">Логин</label>
-        <input name="login" id="login" type="text" required>
-      </div>
-      <div class="login-block__item login-block__item--pass">
-        <label for="password">Пароль</label>
-        <input name="password" id="password" type="password" required>
-        <svg class="login-block__icon" width="22" height="12">
-          <use xlink:href="img/sprite_auto.svg#icon-eye"></use>
-        </svg>
-      </div>
-      <a class="login-block__forgot-password" href="#">Забыли пороль?</a>
-      <button class="login-block__submit" type="submit">Войти</button>
-    </form>
-    <button class="login-block__closer popup__close" type="button" aria-label="Закрыть окно"></button>
-  </section>
+  <div class="login">
+    <div class="login__form form popup-login">
+      <h2 class="visually-hidden">Авторизация</h2>
+      <form action="#">
+        <a class="form__logo" aria-label="Логотип кампании">
+          <img src="img/content/logo-popup.svg" width="150" height="27" alt="Логотип Лига Банк">
+        </a>
+        <div class="form__item">
+          <label for="entrance-login">Логин</label>
+          <input name="login" id="entrance-login" type="text" required>
+        </div>
+        <div class="form__item form__item--pass">
+          <label for="entrance-password">Пароль</label>
+          <input name="password" id="entrance-password" type="password" required>
+          <svg class="form__icon" width="22" height="12">
+            <use xlink:href="img/sprite_auto.svg#icon-eye"></use>
+          </svg>
+        </div>
+        <a class="form__forgot-password" href="#">Забыли пороль?</a>
+        <button class="form__submit popup-login__submit" type="submit">Войти</button>
+      </form>
+      <button class="form__closer popup-login__close" type="button" aria-label="Закрыть окно"></button>
+    </div>
+  </div>
   <script src="js/main.js"></script>
 </body>
 

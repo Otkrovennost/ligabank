@@ -19,7 +19,6 @@
     max-width: 1023px;
     padding-right: 0;
     padding-left: 0;
-
   }
 
   @media ($mobile) {
@@ -38,7 +37,7 @@
 
   @media ($mobile) {
     width: 113px;
-    margin-left: 23px;
+    margin-left: 27px;
   }
 }
 
@@ -115,8 +114,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-grow: 1;
-  width: 58%;
-  margin: 0;
+  width: 50%;
+  margin: 0 25px 0 0;
   padding: 10px 0 0;
   list-style: none;
 
@@ -150,6 +149,7 @@
 .nav__link {
   margin-left: 25px;
   padding: 0 0 10px 0;
+  outline: none;
 
   @media ($tablet) {
     margin-left: 20px;
@@ -167,8 +167,9 @@
 
 .nav__user-link {
   position: relative;
-  width: 21%;
-  padding: 10px 0 10px 50px;
+  width: 250px;
+  padding: 10px 0 10px 37px;
+  outline: none;
 
   @media ($tablet) {
     width: 5%;
@@ -182,7 +183,7 @@
   svg {
     position: absolute;
     top: 7px;
-    left: 20px;
+    left: 7px;
 
     @media ($tablet) {
       top: 2px;

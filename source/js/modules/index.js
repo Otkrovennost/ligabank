@@ -1,11 +1,14 @@
-`use strict`
-
-import { navMain, navToggler, openMenu } from "./nav.js";
-import { eyeIcon, popupOpenHandler, SaveInLocalStorageHandler, showPasswordHandler } from "./popup.js";
+import {
+  navMain, navToggler, openMenu
+} from "./nav.js";
+import {
+  eyeIcon, popupOpenHandler, saveInLocalStorageHandler, showPasswordHandler
+} from "./popup-login.js";
 
 const openLoginLink = document.querySelector(`.nav__user-link`);
 const navItemLinks = document.querySelectorAll(`.nav__link`);
 const submitForm = document.querySelector(`form`);
+
 navMain.classList.add(`nav--closed`);
 navMain.classList.remove(`nav--nojs`);
 
@@ -22,7 +25,7 @@ if (openLoginLink) {
 }
 
 if (submitForm) {
-  submitForm.addEventListener(`submit`, SaveInLocalStorageHandler);
+  submitForm.addEventListener(`submit`, saveInLocalStorageHandler);
 }
 
 if (eyeIcon) {

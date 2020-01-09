@@ -1,9 +1,10 @@
-.login-block {
+.form {
+  position: relative;
   top: 50%;
   left: 50%;
   width: 544px;
   min-height: 493px;
-  max-height: 100hv;
+  max-height: 100%;
   background-color: $color-bg-base;
   border: 4px solid $color-design;
   transform: translate(-50%, -50%);
@@ -19,7 +20,7 @@
   }
 }
 
-.login-block__logo {
+.form__logo {
   display: block;
   width: 100%;
   margin-bottom: 38px;
@@ -29,7 +30,7 @@
   }
 }
 
-.login-block__item {
+.form__item {
   width: 100%;
   margin-bottom: 27px;
   padding: 0;
@@ -58,7 +59,7 @@
   }
 }
 
-.login-block__icon {
+.form__icon {
   position: absolute;
   bottom: 25px;
   right: 25px;
@@ -69,7 +70,7 @@
   }
 }
 
-.login-block form {
+.form form {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -96,7 +97,7 @@
   }
 }
 
-.login-block__submit {
+.form__submit {
   width: 100%;
   padding: 22px;
   font-size: 18px;
@@ -123,7 +124,7 @@
   }
 }
 
-.login-block__forgot-password {
+.form__forgot-password {
   width: 100%;
   margin-bottom: 24px;
   padding-top: 6px;
@@ -150,7 +151,7 @@
   }
 }
 
-.login-block__closer {
+.form__closer {
   position: absolute;
   z-index: 3;
   top: 50px;
@@ -196,7 +197,8 @@
     transform: rotate(-45deg);
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
     box-shadow: 0 0 10px 3px $color-design;
   }

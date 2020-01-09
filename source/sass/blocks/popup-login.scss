@@ -1,11 +1,11 @@
-.popup {
+.popup-login {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 50%;
   left: 50%;
 }
 
-.popup--show {
+.popup-login--show {
   display: block;
 }

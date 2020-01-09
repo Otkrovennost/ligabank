@@ -12,4 +12,6 @@ let openMenu = function () {
   }
 };
 
-export { navMain, navToggler, openMenu }
+export {
+  navMain, navToggler, openMenu
+};
