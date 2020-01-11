@@ -10,7 +10,6 @@ const navItemLinks = document.querySelectorAll(`.nav__link`);
 const submitForm = document.querySelector(`form`);
 
 navMain.classList.add(`nav--closed`);
-navMain.classList.remove(`nav--nojs`);
 
 if (navMain) {
   navToggler.addEventListener(`click`, openMenu);

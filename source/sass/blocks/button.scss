@@ -1,0 +1,13 @@
+.button {
+  display: table;
+  font-size: 18px;
+  line-height: 21px;
+  border: 0;
+  border-radius: 4px;
+  transition: 0.9s;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 0 2px $color-design inset, 0 0 0 4px #ffffff inset;
+  }
+}

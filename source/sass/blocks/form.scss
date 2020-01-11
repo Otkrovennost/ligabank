@@ -100,11 +100,7 @@
 .form__submit {
   width: 100%;
   padding: 22px;
-  font-size: 18px;
-  line-height: 21px;
   color: $color-bg-base;
-  border: 0;
-  border-radius: 4px;
   background-color: $color-design;
   transition: 0.9s;
 
@@ -112,15 +108,6 @@
     padding: 18px 105px;
     font-size: 14px;
     line-height: 16px;
-  }
-
-  &:focus,
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 

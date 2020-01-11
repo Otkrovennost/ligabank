@@ -1,0 +1,216 @@
+.teasers__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teasers__item {
+  h3 {
+    width: 280px;
+    margin: 0 0 7px 0;
+    font-size: 54px;
+    line-height: 63px;
+    font-weight: 700;
+
+    @media ($tablet) {
+      font-size: 46px;
+      line-height: 54px;
+    }
+
+    @media ($mobile) {
+      width: 198px;
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+
+  p {
+    width: 410px;
+    margin: 0 0 36px 0;
+    font-size: 22px;
+    line-height: 26px;
+    color: #2b3c4f;
+
+    @media ($tablet) {
+      width: 330px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @media ($mobile) {
+      width: 150px;
+      margin-bottom: 26px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &--card {
+    h3 {
+      color: $color-bg-base;
+    }
+
+    p {
+      width: 280px;
+      color: $color-bg-base;
+
+      @media ($tablet) {
+        width: 230px;
+      }
+
+      @media ($mobile) {
+        width: 200px;
+      }
+    }
+
+    background-color: #2d36f3;
+    background-image: url("../img/bg/slider-1-desktop@1x.png"), $gradient-photo-card;
+
+    @media ($retina) {
+      background-image: url("../img/bg/slider-1-desktop@2x.png"), $gradient-photo-card;
+      background-size: 1366px 100%;
+    }
+
+    @media ($tablet) {
+      background-image: url("../img/bg/slider-1-tablet@1x.png");
+      background-size: 768px auto;
+    }
+
+    @media ($tablet) and ($retina) {
+      background-image: url("../img/bg/slider-1-tablet@2x.png");
+    }
+
+    @media ($mobile) {
+      background-image: url("../img/bg/slider-1-mobile@1x.png");
+      background-size: 320px auto;
+    }
+
+    @media ($mobile) and ($retina) {
+      background-image: url("../img/bg/slider-1-mobile@2x.png");
+    }
+  }
+
+  &--man {
+    background-color: #dee2ed;
+    background-image: url("../img/bg/slider-2-desktop@1x.jpg"), $gradient-photo-man;
+
+    @media ($retina) {
+      background-image: url("../img/bg/slider-2-desktop@2x.jpg"), $gradient-photo-man;
+      background-size: 1366px 100%;
+    }
+
+    @media ($tablet) {
+      background-image: url("../img/bg/slider-2-tablet@1x.jpg");
+      background-size: 768px auto;
+    }
+
+    @media ($tablet) and ($retina) {
+      background-image: url("../img/bg/slider-2-tablet@2x.jpg");
+    }
+
+    @media ($mobile) {
+      background-image: url("../img/bg/slider-2-mobile@1x.jpg");
+      background-size: 320px auto;
+    }
+
+    @media ($mobile) and ($retina) {
+      background-image: url("../img/bg/slider-2-mobile@2x.jpg");
+    }
+  }
+
+  &--girl {
+    background-image: url("../img/bg/slider-3-desktop@1x.jpg");
+    background-color: #e7f1fd;
+
+    @media ($retina) {
+      background-image: url("../img/bg/slider-3-desktop@2x.jpg");
+      background-size: 1366px 100%;
+    }
+
+    @media ($tablet) {
+      background-image: url("../img/bg/slider-3-tablet@1x.jpg");
+      background-size: 768px auto;
+    }
+
+    @media ($tablet) and ($retina) {
+      background-image: url("../img/bg/slider-3-tablet@2x.jpg");
+    }
+
+    @media ($mobile) {
+      background-image: url("../img/bg/slider-3-mobile@1x.jpg");
+      background-size: 320px auto;
+    }
+
+    @media ($mobile) and ($retina) {
+      background-image: url("../img/bg/slider-3-mobile@2x.jpg");
+    }
+  }
+}
+
+.teasers__list .teasers__item {
+  height: 400px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center, 100%;
+
+
+  @media ($tablet) {
+    height: 300px;
+    background-position: center right;
+  }
+
+  @media ($mobile) {
+    height: 226px;
+  }
+}
+
+.teasers__content {
+  box-sizing: border-box;
+  padding: 102px 0 60px 190px;
+
+  @media ($tablet) {
+    padding: 66px 0 35px 86px;
+  }
+
+  @media ($mobile) {
+    padding: 37px 0 40px 14px;
+  }
+}
+
+.teasers__link {
+  width: 236px;
+  padding: 15px 37px;
+  font-weight: 500;
+  color: $color-default;
+  background-color: $color-bg-base;
+
+  @media ($tablet) {
+    width: 208px;
+    padding: 14px 32px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media ($mobile) {
+    width: 190px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.teasers__item--girl .teasers__link {
+  width: 244px;
+  padding: 15px 48px;
+  color: $color-bg-base;
+  background-color: $color-design;
+
+  @media ($tablet) {
+    width: 206px;
+    padding: 14px 38px;
+  }
+
+  @media ($mobile) {
+    width: 190px;
+  }
+}

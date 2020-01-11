@@ -5,16 +5,20 @@ const popupSubmitBtn = popupElement.querySelector(`.popup-login__submit`);
 const userName = popupElement.querySelector(`[name = login]`);
 const userPassword = popupElement.querySelector(`[name = password]`);
 const eyeIcon = popupElement.querySelector(`.form__icon`);
-const overlayBlock = document.querySelector(`.login`);
+// const overlayBlock = document.querySelector(`.login`);
 let storageName = localStorage.getItem(`login`);
 let storagePassword = localStorage.getItem(`password`);
 
-let saveInLocalStorageHandler = (evt) => {
-  if (!userName.value || !userPassword.value) {
-    evt.preventDefault();
-  } else {
+let popupCloserHandler = () => {
+  popupElement.classList.remove(`popup-login--show`);
+  // overlayBlock.classList.remove(`overlay`);
+};
+
+let saveInLocalStorageHandler = () => {
+  if (userName.value || userPassword.value) {
     localStorage.setItem(`login`, userName.value);
     localStorage.setItem(`password`, userPassword.value);
+    popupCloserHandler();
   }
 };
 
@@ -24,11 +28,6 @@ let getInLocalStorage = () => {
     userPassword.value = storagePassword;
     popupSubmitBtn.focus();
   }
-};
-
-let popupCloserHandler = () => {
-  popupElement.classList.remove(`popup-login--show`);
-  overlayBlock.classList.remove(`overlay`);
 };
 
 let closeByEsc = () => {
@@ -42,7 +41,7 @@ let closeByEsc = () => {
 let CloseOnClickOutsideHandler = (e) => {
   let target = e.target;
 
-  if (target.classList.contains(`login`)) {
+  if (target.classList.contains(`popup-login__overlay`)) {
     popupCloserHandler();
   }
 };
@@ -64,7 +63,7 @@ let showPasswordHandler = (evt) => {
 let popupOpenHandler = () => {
   if (popupElement) {
     popupElement.classList.add(`popup-login--show`);
-    overlayBlock.classList.add(`overlay`);
+    // overlayBlock.classList.add(`overlay`);
     userName.focus();
     getInLocalStorage();
   }
@@ -75,5 +74,5 @@ let popupOpenHandler = () => {
 };
 
 export {
-  eyeIcon, storageName, storagePassword, popupOpenHandler, saveInLocalStorageHandler, showPasswordHandler
+  eyeIcon, popupOpenHandler, saveInLocalStorageHandler, showPasswordHandler
 };

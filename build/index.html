@@ -43,31 +43,63 @@
       </a>
     </nav>
   </header>
-  <div class="login">
-    <div class="login__form form popup-login">
-      <h2 class="visually-hidden">Авторизация</h2>
-      <form action="#">
-        <a class="form__logo" aria-label="Логотип кампании">
-          <img src="img/content/logo-popup.svg" width="150" height="27" alt="Логотип Лига Банк">
-        </a>
-        <div class="form__item">
-          <label for="entrance-login">Логин</label>
-          <input name="login" id="entrance-login" type="text" required="">
-        </div>
-        <div class="form__item form__item--pass">
-          <label for="entrance-password">Пароль</label>
-          <input name="password" id="entrance-password" type="password" required="">
-          <svg class="form__icon" width="22" height="12">
-            <use xlink:href="img/sprite_auto.svg#icon-eye"></use>
-          </svg>
-        </div>
-        <a class="form__forgot-password" href="#">Забыли пороль?</a>
-        <button class="form__submit popup-login__submit" type="submit">Войти</button>
-      </form>
-      <button class="form__closer popup-login__close" type="button" aria-label="Закрыть окно"></button>
+  <main class="content">
+    <section class="content__teasers teasers swiper-container">
+      <h3 class="visually-hidden">Тизеры</h3>
+      <ul class="teasers__list swiper-wrapper">
+        <li class="teasers__item teasers__item--card swiper-slide">
+          <div class="teasers__content container">
+            <h3>Лига Банк</h3>
+            <p>Кредиты на любой случай</p>
+            <a href="#" class="teasers__link button">Рассчитать кредит</a>
+          </div>
+        </li>
+        <li class="teasers__item teasers__item--man swiper-slide swiper-slide--man">
+          <div class="teasers__content container">
+            <h3>Лига Банк</h3>
+            <p>Ваша уверенность в завтрашнем дне</p>
+          </div>
+          
+        </li>
+        <li class="teasers__item teasers__item--girl swiper-slide swiper-slide--girl">
+          <div class="teasers__content container">
+            <h3>Лига Банк</h3>
+            <p>Всегда рядом</p>
+            <a href="#" class="teasers__link button">Найти отделение</a>
+          </div>
+        </li>
+      </ul>
+      <div class="swiper-pagination"></div>
+    </section>
+  </main>
+  <div class="popup-login">
+    <div class="popup-login__overlay">
+      <div class="popup-login__form form">
+        <h2 class="visually-hidden">Авторизация</h2>
+        <form action="#">
+          <a class="form__logo" aria-label="Логотип кампании">
+            <img src="img/content/logo-popup.svg" width="150" height="27" alt="Логотип Лига Банк">
+          </a>
+          <div class="form__item">
+            <label for="entrance-login">Логин</label>
+            <input name="login" id="entrance-login" type="text" required="">
+          </div>
+          <div class="form__item form__item--pass">
+            <label for="entrance-password">Пароль</label>
+            <input name="password" id="entrance-password" type="password" required="">
+            <svg class="form__icon" width="22" height="12">
+              <use xlink:href="img/sprite_auto.svg#icon-eye"></use>
+            </svg>
+          </div>
+          <a class="form__forgot-password" href="#">Забыли пороль?</a>
+          <button class="form__submit popup-login__submit button" type="submit">Войти</button>
+        </form>
+        <button class="form__closer popup-login__close" type="button" aria-label="Закрыть окно"></button>
+      </div>
     </div>
   </div>
   <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,21 @@
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 36px;
+  left: -3px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #2028b6;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f6f7ff;
+}
+
+.swiper-slide--man .swiper-pagination-bullet {
+  background-color: #f6f7ff;
+}
+
+.swiper-slide--man .swiper-pagination-bullet-active {
+  background-color: #2028b6;
+}
