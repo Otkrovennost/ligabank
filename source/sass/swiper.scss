@@ -1,21 +1,26 @@
 .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 36px;
-  left: -3px;
+
+  @media ($tablet) {
+    bottom: 11px;
+  }
+
+  @media ($mobile) {
+    bottom: 7px;
+  }
 }
 
 .swiper-pagination-bullet {
   background-color: #2028b6;
   opacity: 1;
+
+  @media ($mobile) {
+    width: 5px;
+    height: 5px;
+  }
 }
 
 .swiper-pagination-bullet-active {
   background-color: #f6f7ff;
 }
 
-.swiper-slide--man .swiper-pagination-bullet {
-  background-color: #f6f7ff;
-}
-
-.swiper-slide--man .swiper-pagination-bullet-active {
-  background-color: #2028b6;
-}

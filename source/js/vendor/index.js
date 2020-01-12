@@ -1,14 +1,9 @@
-import Swiper from 'swiper';
+import {
+  sliderAnimation
+} from "./swiper.js";
 
-let swiper = new Swiper(`.swiper-container`, {
-  spaceBetween: 0,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: `.swiper-pagination`,
-    clickable: true,
-  },
-});
+const sliderBlock = document.querySelector(`.teasers`);
+
+if (sliderBlock) {
+  sliderAnimation();
+}

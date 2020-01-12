@@ -29,7 +29,7 @@
 
 .nav__logo {
   width: 150px;
-  margin-right: 32px;
+  margin-right: 35px;
 
   @media ($tablet) {
     width: 133px;
@@ -169,7 +169,7 @@
 .nav__user-link {
   position: relative;
   width: 250px;
-  padding: 10px 0 10px 34px;
+  padding: 10px 0 10px 37px;
   outline: none;
 
   @media ($tablet) {
@@ -184,7 +184,7 @@
   svg {
     position: absolute;
     top: 7px;
-    left: 4px;
+    left: 8px;
 
     @media ($tablet) {
       top: 2px;

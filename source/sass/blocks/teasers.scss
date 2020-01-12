@@ -65,10 +65,10 @@
     }
 
     background-color: #2d36f3;
-    background-image: url("../img/bg/slider-1-desktop@1x.png"), $gradient-photo-card;
+    background-image: url("../img/bg/slider-1-desktop@1x.png"), linear-gradient(180deg, #2d36f3 33%, #2128b6 99%);
 
     @media ($retina) {
-      background-image: url("../img/bg/slider-1-desktop@2x.png"), $gradient-photo-card;
+      background-image: url("../img/bg/slider-1-desktop@2x.png"), linear-gradient(180deg, #2d36f3 33%, #2128b6 99%);
       background-size: 1366px 100%;
     }
 
@@ -93,10 +93,10 @@
 
   &--man {
     background-color: #dee2ed;
-    background-image: url("../img/bg/slider-2-desktop@1x.jpg"), $gradient-photo-man;
+    background-image: url("../img/bg/slider-2-desktop@1x.jpg"), linear-gradient(109deg, #dee2ed 68%, #f7fcff 91%);
 
     @media ($retina) {
-      background-image: url("../img/bg/slider-2-desktop@2x.jpg"), $gradient-photo-man;
+      background-image: url("../img/bg/slider-2-desktop@2x.jpg"), linear-gradient(109deg, #dee2ed 68%, #f7fcff 91%);
       background-size: 1366px 100%;
     }
 
@@ -179,38 +179,29 @@
 }
 
 .teasers__link {
-  width: 236px;
   padding: 15px 37px;
   font-weight: 500;
   color: $color-default;
   background-color: $color-bg-base;
 
   @media ($tablet) {
-    width: 208px;
     padding: 14px 32px;
     font-size: 16px;
     line-height: 19px;
   }
 
   @media ($mobile) {
-    width: 190px;
     font-size: 14px;
     line-height: 16px;
   }
 }
 
 .teasers__item--girl .teasers__link {
-  width: 244px;
   padding: 15px 48px;
   color: $color-bg-base;
   background-color: $color-design;
 
   @media ($tablet) {
-    width: 206px;
     padding: 14px 38px;
-  }
-
-  @media ($mobile) {
-    width: 190px;
   }
 }
