@@ -69,12 +69,10 @@
 
     @media ($retina) {
       background-image: url("../img/bg/slider-1-desktop@2x.png");
-      background-size: 1366px 100%;
     }
 
     @media ($tablet) {
       background-image: url("../img/bg/slider-1-tablet@1x.png");
-      background-size: 768px auto;
     }
 
     @media ($tablet) and ($retina) {
@@ -83,7 +81,6 @@
 
     @media ($mobile) {
       background-image: url("../img/bg/slider-1-mobile@1x.png");
-      background-size: 320px auto;
     }
 
     @media ($mobile) and ($retina) {
@@ -96,13 +93,11 @@
 
     @media ($retina) {
       background: url("../img/bg/slider-2-desktop@2x.jpg") center no-repeat, linear-gradient(to right, #dee3ed 0%, #dee3ed 50%, #f3faff  50%, #f3faff 100%);
-      background-size: 1366px 100%;
     }
 
     @media ($tablet) {
       background-color: #dee3ed;
       background-image: url("../img/bg/slider-2-tablet@1x.jpg");
-      background-size: 768px auto;
     }
 
     @media ($tablet) and ($retina) {
@@ -111,7 +106,6 @@
 
     @media ($mobile) {
       background-image: url("../img/bg/slider-2-mobile@1x.jpg");
-      background-size: 320px auto;
     }
 
     @media ($mobile) and ($retina) {
@@ -125,12 +119,10 @@
 
     @media ($retina) {
       background-image: url("../img/bg/slider-3-desktop@2x.jpg");
-      background-size: 1366px 100%;
     }
 
     @media ($tablet) {
       background-image: url("../img/bg/slider-3-tablet@1x.jpg");
-      background-size: 768px auto;
     }
 
     @media ($tablet) and ($retina) {
@@ -139,7 +131,6 @@
 
     @media ($mobile) {
       background-image: url("../img/bg/slider-3-mobile@1x.jpg");
-      background-size: 320px auto;
     }
 
     @media ($mobile) and ($retina) {
@@ -149,9 +140,11 @@
 }
 
 .teasers__list .teasers__item {
+  height: auto;
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: auto 100%;
 
   @media ($tablet) {
     background-position: center right;
