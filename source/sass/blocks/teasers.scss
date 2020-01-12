@@ -65,10 +65,10 @@
     }
 
     background-color: #2d36f3;
-    background-image: url("../img/bg/slider-1-desktop@1x.png"), linear-gradient(180deg, #2d36f3 33%, #2128b6 99%);
+    background-image: url("../img/bg/slider-1-desktop@1x.png");
 
     @media ($retina) {
-      background-image: url("../img/bg/slider-1-desktop@2x.png"), linear-gradient(180deg, #2d36f3 33%, #2128b6 99%);
+      background-image: url("../img/bg/slider-1-desktop@2x.png");
       background-size: 1366px 100%;
     }
 
@@ -92,15 +92,15 @@
   }
 
   &--man {
-    background-color: #dee2ed;
-    background-image: url("../img/bg/slider-2-desktop@1x.jpg"), linear-gradient(109deg, #dee2ed 68%, #f7fcff 91%);
+    background: url("../img/bg/slider-2-desktop@1x.jpg") center no-repeat, linear-gradient(to right, #dee3ed 0%, #dee3ed 50%, #f3faff  50%, #f3faff 100%);
 
     @media ($retina) {
-      background-image: url("../img/bg/slider-2-desktop@2x.jpg"), linear-gradient(109deg, #dee2ed 68%, #f7fcff 91%);
+      background: url("../img/bg/slider-2-desktop@2x.jpg") center no-repeat, linear-gradient(to right, #dee3ed 0%, #dee3ed 50%, #f3faff  50%, #f3faff 100%);
       background-size: 1366px 100%;
     }
 
     @media ($tablet) {
+      background-color: #dee3ed;
       background-image: url("../img/bg/slider-2-tablet@1x.jpg");
       background-size: 768px auto;
     }
@@ -110,7 +110,7 @@
     }
 
     @media ($mobile) {
-      background-image: url("../img/bg/slider-2-mobile@1x.jpg");
+      background-image: url("../img/bg/slider-2-mobile@1x.jpg") ;
       background-size: 320px auto;
     }
 
@@ -149,32 +149,37 @@
 }
 
 .teasers__list .teasers__item {
-  height: 400px;
   box-sizing: border-box;
   background-repeat: no-repeat;
-  background-position: center, 100%;
-
+  background-position: center;
 
   @media ($tablet) {
-    height: 300px;
     background-position: center right;
-  }
-
-  @media ($mobile) {
-    height: 226px;
   }
 }
 
 .teasers__content {
   box-sizing: border-box;
-  padding: 102px 0 60px 190px;
+  padding: 102px 60px 115px 190px;
 
   @media ($tablet) {
-    padding: 66px 0 35px 86px;
+    padding: 66px 35px 75px 86px;
   }
 
   @media ($mobile) {
-    padding: 37px 0 40px 14px;
+    padding: 37px 40px 50px 14px;
+  }
+}
+
+.teasers__content--man {
+  padding-bottom: 166px;
+
+  @media ($tablet) {
+    padding-bottom: 122px;
+  }
+
+  @media ($mobile) {
+    padding-bottom: 75px;
   }
 }
 
