@@ -4,6 +4,9 @@ import {
 import {
   eyeIcon, popupOpenHandler, saveInLocalStorageHandler, showPasswordHandler
 } from "./popup-login.js";
+import {
+  tab, tabContent, hideTab
+} from "./tab.js";
 
 const openLoginLink = document.querySelector(`.nav__user-link`);
 const navItemLinks = document.querySelectorAll(`.nav__link`);
@@ -29,4 +32,15 @@ if (submitForm) {
 
 if (eyeIcon) {
   eyeIcon.addEventListener(`mousedown`, showPasswordHandler);
+}
+
+
+if (tab) {
+  tab.forEach(function (tab, i) {
+    tab.addEventListener(`click`, function () {
+      hideTab();
+      this.classList.add(`services__tab-item--show`);
+      tabContent[i].classList.add(`services__item--show`);
+    });
+  });
 }

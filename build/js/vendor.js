@@ -130,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var dom7
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swiper.js */ \"./source/js/vendor/swiper.js\");\n\nvar sliderBlock = document.querySelector(\".teasers\");\n\nif (sliderBlock) {\n  Object(_swiper_js__WEBPACK_IMPORTED_MODULE_0__[\"sliderAnimation\"])();\n}\n\n//# sourceURL=webpack:///./source/js/vendor/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swiper.js */ \"./source/js/vendor/swiper.js\");\n\nvar sliderBlock = document.querySelector(\".teasers\");\nvar sliderTabsBlock = document.querySelector(\".services\");\n\nif (sliderBlock) {\n  Object(_swiper_js__WEBPACK_IMPORTED_MODULE_0__[\"sliderAnimation\"])();\n}\n\nif (sliderTabsBlock) {\n  Object(_swiper_js__WEBPACK_IMPORTED_MODULE_0__[\"tabsSlider\"])();\n}\n\n//# sourceURL=webpack:///./source/js/vendor/index.js?");
 
 /***/ }),
 
@@ -138,11 +138,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _swi
 /*!************************************!*\
   !*** ./source/js/vendor/swiper.js ***!
   \************************************/
-/*! exports provided: sliderAnimation */
+/*! exports provided: sliderAnimation, tabsSlider */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sliderAnimation\", function() { return sliderAnimation; });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/js/swiper.esm.bundle.js\");\n\n\nvar sliderAnimation = function sliderAnimation() {\n  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\".swiper-container\", {\n    loop: true,\n    speed: 500,\n    spaceBetween: 10,\n    autoplay: {\n      delay: 4000\n    },\n    breakpoints: {\n      320: {\n        pagination: {\n          el: \".swiper-pagination\",\n          clickable: false\n        }\n      },\n      1024: {\n        pagination: {\n          el: \".swiper-pagination\",\n          clickable: true\n        }\n      }\n    }\n  });\n};\n\n\n\n//# sourceURL=webpack:///./source/js/vendor/swiper.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sliderAnimation\", function() { return sliderAnimation; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"tabsSlider\", function() { return tabsSlider; });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/js/swiper.esm.bundle.js\");\n\nvar breakpoint = window.matchMedia(\"min-width: 1024px\");\n\nvar sliderAnimation = function sliderAnimation() {\n  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\".swiper-container\", {\n    loop: true,\n    speed: 500,\n    spaceBetween: 10,\n    autoplay: {\n      delay: 4000\n    },\n    breakpoints: {\n      320: {\n        pagination: {\n          el: \".swiper-pagination\",\n          clickable: false\n        }\n      },\n      1024: {\n        pagination: {\n          el: \".swiper-pagination\",\n          clickable: true\n        }\n      }\n    }\n  });\n};\n\nvar tabsSlider = function tabsSlider() {\n  var breakpointChecker = function breakpointChecker() {\n    if (breakpoint.matches === true) {\n      swiper.destroy(true, true);\n    } else if (breakpoint.matches === false) {\n      return sliderAnimation();\n    }\n  };\n\n  breakpoint.addListener(breakpointChecker);\n  breakpointChecker();\n};\n\n\n\n//# sourceURL=webpack:///./source/js/vendor/swiper.js?");
 
 /***/ })
 

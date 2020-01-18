@@ -1,0 +1,7 @@
+.content__teasers {
+  margin-bottom: 60px;
+
+  @media ($tablet) {
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
 
+const breakpoint = window.matchMedia(`(min-width: 1024px)`);
+
 const sliderAnimation = () => {
   const swiper = new Swiper(`.swiper-container`, {
     loop: true,
@@ -25,6 +27,21 @@ const sliderAnimation = () => {
   });
 };
 
+let tabsSlider = () => {
+
+  let breakpointChecker = () => {
+    if (breakpoint.matches === true) {
+      swiper.destroy(true, true);
+    } else if (breakpoint.matches === false) {
+      return sliderAnimation();
+    }
+  };
+
+  breakpoint.addListener(breakpointChecker);
+
+  breakpointChecker();
+}
+
 export {
-  sliderAnimation
+  sliderAnimation, tabsSlider
 };

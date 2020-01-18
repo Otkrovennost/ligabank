@@ -1,0 +1,297 @@
+.service {
+  b {
+    display: block;
+    margin-bottom: 27px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+
+    @media ($tablet) {
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @media ($mobile) {
+      width: 270px;
+      margin-bottom: 21px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding-right: 35px;
+    line-height: 25px;
+
+    @media ($tablet) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @media ($mobile) {
+      width: 298px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.service--credit {
+  b {
+    width: 75%;
+
+    @media ($tablet) {
+      width: 70%;
+    }
+
+    @media ($mobile) {
+      width: 208px;
+    }
+  }
+}
+
+.service--insurance {
+  b {
+    width: 90%;
+
+    @media ($tablet) {
+      width: 80%;
+    }
+
+    @media ($mobile) {
+      width: 250px;
+    }
+  }
+}
+
+.service--mobile {
+  b {
+    width: 100%;
+    margin-bottom: 24px;
+
+    @media ($mobile) {
+      width: 230px;
+    }
+  }
+}
+
+.service__content {
+  width: 50%;
+  padding: 62px 110px 60px 70px;
+
+  @media ($tablet) {
+    width: 52%;
+    padding: 55px 5px 60px 45px;
+  }
+
+  @media ($mobile) {
+    width: 100%;
+    padding: 52px 15px 60px;
+  }
+}
+
+.service--credit .service__content {
+  @media ($mobile) {
+    padding: 52px 15px 85px;
+  }
+}
+
+.service--insurance .service__content {
+  @media ($mobile) {
+    padding: 52px 15px 95px;
+  }
+}
+
+.service--mobile .service__content {
+  padding: 62px 85px 60px 70px;
+
+  @media ($tablet) {
+    padding: 62px 15px 60px 45px;
+  }
+
+  @media ($mobile) {
+    width: 100%;
+    padding: 52px 15px 50px;
+  }
+}
+
+.service__inner-list {
+  margin: 0 0 21px 0;
+  padding: 0;
+  line-height: 24px;
+  list-style: none;
+
+  @media ($tablet) {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  @media ($mobile) {
+    position: relative;
+    width: 229px;
+    margin: 0 0 11px 0;
+    font-size: 14px;
+    line-height: 17px;
+    z-index: 10;
+  }
+}
+
+.service--credit .service__inner-list {
+  margin-bottom: 14px;
+
+  @media ($mobile) {
+    margin-bottom: 7px;
+  }
+}
+
+.service__inner-item {
+  position: relative;
+  padding-bottom: 14px;
+  padding-left: 20px;
+
+  @media ($mobile) {
+    padding-left: 15px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 10px;
+    top: 6px;
+    left: 0;
+    background-image: url("../img/bg/check-icon.svg");
+    background-repeat: no-repeat;
+
+    @media ($mobile) {
+      top: 1px;
+      left: -2px;
+    }
+  }
+
+  &--bank {
+    width: 245px;
+
+    @media ($tablet) {
+      width: 220px;
+    }
+
+    @media ($mobile) {
+      width: 190px;
+    }
+  }
+
+  &--transit {
+    width: 360px;
+
+    @media ($tablet) {
+      width: 348px;
+    }
+
+    @media ($mobile) {
+      width: 210px;
+    }
+  }
+}
+
+.service__link {
+  padding: 15px 31px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  color: $color-bg-base;
+  background-color: $color-design;
+
+  @media ($mobile) {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  &--advantages-main {
+    @media ($mobile) {
+      display: none;
+    }
+  }
+
+  &--advantages-mob {
+    display: none;
+
+    @media ($mobile) {
+      display: block;
+    }
+  }
+
+  &--credit {
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      transition: 0.9s;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: 0.9s;
+    }
+  }
+
+  &--insurance {
+    padding: 13px 31px;
+  }
+}
+
+.service__img {
+  width: 440px;
+  height: 290px;
+  margin-top: 69px;
+  margin-left: 10px;
+
+  @media ($tablet) {
+    position: absolute;
+    width: auto;
+    height: 260px;
+    margin: 0;
+    top: 61px;
+    right: 47px;
+  }
+
+  @media ($mobile) {
+    position: absolute;
+    width: 87px;
+    height: 113px;
+    top: 96px;
+    right: 0;
+  }
+
+  &--insurance {
+    @media ($mobile) {
+      top: 94px;
+    }
+  }
+
+  &--card {
+    @media ($mobile) {
+      top: 95px;
+    }
+  }
+
+  &--mobile {
+    margin-top: 62px;
+
+    @media ($tablet) {
+      margin: 0;
+      top: 67px;
+    }
+
+    @media ($mobile) {
+      top: 97px;
+    }
+  }
+}

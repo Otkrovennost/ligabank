@@ -70,6 +70,148 @@
       </ul>
       <div class="swiper-pagination"></div>
     </section>
+    <section class="services container swiper-container">
+      <h2 class="visually-hidden">Услуги, оказываемые банком</h2>
+      <ul class="services__tab-list">
+        <li class="services__tab-item services__tab-item--show">
+          <a class="services__tab-link services__tab-link--advantages" href="#nowhere">
+            <svg width="34" height="33">
+              <use xlink:href="img/sprite_auto.svg#icon-vault"></use>
+            </svg>
+            <span>Вклады</span>
+          </a>
+        </li>
+        <li class="services__tab-item">
+          <a class="services__tab-link services__tab-link--card" href="#nowhere">
+            <svg width="34" height="30">
+              <use xlink:href="img/sprite_auto.svg#icon-cards"></use>
+            </svg>
+            <span>Кредиты</span>
+          </a>
+        </li>
+        <li class="services__tab-item">
+          <a class="services__tab-link services__tab-link--insurance" href="#nowhere">
+            <svg width="28" height="34">
+              <use xlink:href="img/sprite_auto.svg#icon-security"></use>
+            </svg>
+            <span>Страхование</span>
+          </a>
+        </li>
+        <li class="services__tab-item">
+          <a class="services__tab-link services__tab-link--mobile" href="#nowhere">
+            <svg width="20" height="34">
+              <use xlink:href="img/sprite_auto.svg#icon-phone-tab"></use>
+            </svg>
+            <span>Онлайн-сервисы</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="services__list swiper-wrapper">
+        <li class="services__item services__item--show service service--advantages swiper-slide">
+          <div class="service__content">
+            <b>Вклады Лига Банка – это выгодная инвестиция в свое будущее</b>
+            <ul class="service__inner-list">
+              <li class="service__inner-item">
+                Проценты по вкладам до 7%
+              </li>
+              <li class="service__inner-item">
+                Разнообразные условия
+              </li>
+              <li class="service__inner-item">
+                Возможность ежемесячной капитализации
+                или вывод процентов на банковскую карту
+              </li>
+            </ul>
+            <a class="service__link service__link--advantages-main button" href="#">Узнать подробнее</a>
+            <a class="service__link service__link--advantages-mob button" href="#">Рассчитать кредит</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 768px)" srcset="img/content/piggybank-mobile@2x.webp 1x, img/content/piggybank-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/piggybank-tablet@2x.webp 1x, img/content/piggybank-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/content/piggybank-desktop@2x.webp 1x, img/content/piggybank-desktop@2x.webp 2x">
+            <source media="(max-width: 768px)" srcset="img/content/piggybank-mobile@1x.png 1x, img/content/piggybank-mobile@2x.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/piggybank-tablet@1x.png 1x, img/content/piggybank-tablet@2x.png 2x">
+            <img class="service__img" src="img/content/piggybank-desktop@1x.png" srcset="img/content/piggybank-desktop@2x.png 2x" alt="Картинка копилки">
+          </picture>
+        </li>
+        <li class="services__item service service--credit swiper-slide">
+          <div class="service__content">
+            <b>Лига Банк выдает кредиты под любые цели</b>
+            <ul class="service__inner-list">
+              <li class="service__inner-item">
+                Ипотечный кредит
+              </li>
+              <li class="service__inner-item">
+                Автокредит
+              </li>
+              <li class="service__inner-item">
+                Потребительский кредит
+              </li>
+            </ul>
+            <p>
+              Рассчитайте ежемесячный платеж и&nbsp;ставку по кредиту
+              воспользовавшись нашим <a class="service__link--credit" href="#">кредитным калькулятором</a>
+            </p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 768px)" srcset="img/content/car-mobile@2x.webp 1x, img/content/car-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/car-tablet@2x.webp 1x, img/content/car-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/content/car-desktop@2x.webp 1x, img/content/car-desktop@2x.webp 2x">
+            <source media="(max-width: 768px)" srcset="img/content/car-mobile@1x.png 1x, img/content/car-mobile@2x.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/car-tablet@1x.png 1x, img/content/car-tablet@2x.png 2x">
+            <img class="service__img service__img--credit" src="img/content/car-desktop@1x.png" srcset="img/content/car-desktop@2x.png 2x" alt="Картинка машинки">
+          </picture>
+        </li>
+        <li class="services__item service service--insurance swiper-slide">
+          <div class="service__content">
+            <b>Лига Страхование — застрахуем все что захотите</b>
+            <ul class="service__inner-list">
+              <li class="service__inner-item">
+                Автомобильное страхование
+              </li>
+              <li class="service__inner-item">
+                Страхование жизни и здоровья
+              </li>
+              <li class="service__inner-item">
+                Страхование недвижимости
+              </li>
+            </ul>
+            <a class="service__link button" href="#">Узнать подробнее</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 768px)" srcset="img/content/lock-mobile@2x.webp 1x, img/content/lock-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/lock-tablet@2x.webp 1x, img/content/lock-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/content/lock-desktop@2x.webp 1x, img/content/lock-desktop@2x.webp 2x">
+            <source media="(max-width: 768px)" srcset="img/content/lock-mobile@1x.png 1x, img/content/lock-mobile@2x.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/lock-tablet@1x.png 1x, img/content/lock-tablet@2x.png 2x">
+            <img class="service__img service__img--insurance" src="img/content/lock-desktop@1x.png" srcset="img/content/lock-desktop@2x.png 2x" alt="Картинка замка">
+          </picture>
+        </li>
+        <li class="services__item service service--mobile swiper-slide">
+          <div class="service__content">
+            <b>Лига Банк — это огромное количество онлайн-сервисов для вашего удобства</b>
+            <ul class="service__inner-list">
+              <li class="service__inner-item service__inner-item--bank">
+                Мобильный банк, который всегда под рукой
+              </li>
+              <li class="service__inner-item service__inner-item--transit">
+                Приложение Лига-проездной позволит вам оплачивать билеты по всему миру
+              </li>
+            </ul>
+            <a class="service__link service__link--mobile button" href="#">Узнать подробнее</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 768px)" srcset="img/content/phone-mobile@2x.webp 1x, img/content/phone-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/phone-tablet@2x.webp 1x, img/content/phone-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/content/phone-desktop@2x.webp 1x, img/content/phone-desktop@2x.webp 2x">
+            <source media="(max-width: 768px)" srcset="img/content/phone-mobile@1x.png 1x, img/content/phone-mobile@2x.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/phone-tablet@1x.png 1x, img/content/phone-tablet@2x.png 2x">
+            <img class="service__img service__img--mobile" src="img/content/phone-desktop@1x.png" srcset="img/content/phone-desktop@2x.png 2x" alt="Картинка мобильного телефона">
+          </picture>
+        </li>
+      </ul>
+      <div class="swiper-pagination"></div>
+    </section>
   </main>
   <div class="popup-login">
     <div class="popup-login__overlay">
