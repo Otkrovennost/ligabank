@@ -23,3 +23,24 @@
 .swiper-pagination-bullet-active {
   background-color: #f6f7ff;
 }
+
+.swiper-services {
+  position: relative;
+}
+
+.swiper-pagination-services {
+  display: none;
+
+  @media ($tablet) {
+    position: absolute;
+    display: block;
+    text-align: center;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+  }
+}
+
+.swiper-pagination-services .swiper-pagination-bullet-active {
+  background-color: #e0e0e0;
+}

@@ -19,13 +19,24 @@
       line-height: 22px;
     }
   }
+}
+
+.service--credit {
+  b {
+    width: 70%;
+
+    @media ($mobile) {
+      width: 208px;
+    }
+  }
 
   p {
     margin: 0;
-    padding-right: 35px;
+    padding-right: 95px;
     line-height: 25px;
 
     @media ($tablet) {
+      padding-right: 20px;
       font-size: 16px;
       line-height: 22px;
     }
@@ -34,20 +45,6 @@
       width: 298px;
       font-size: 14px;
       line-height: 20px;
-    }
-  }
-}
-
-.service--credit {
-  b {
-    width: 75%;
-
-    @media ($tablet) {
-      width: 70%;
-    }
-
-    @media ($mobile) {
-      width: 208px;
     }
   }
 }
@@ -69,7 +66,11 @@
 .service--mobile {
   b {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
+
+    @media ($tablet) {
+      margin-bottom: 24px;
+    }
 
     @media ($mobile) {
       width: 230px;
@@ -80,6 +81,7 @@
 .service__content {
   width: 50%;
   padding: 62px 110px 60px 70px;
+  box-sizing: border-box;
 
   @media ($tablet) {
     width: 52%;
@@ -87,12 +89,20 @@
   }
 
   @media ($mobile) {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 52px 15px 60px;
   }
 }
 
 .service--credit .service__content {
+  padding: 62px 50px 60px 70px;
+
+  @media ($tablet) {
+    padding: 55px 5px 60px 45px;
+  }
+
   @media ($mobile) {
     padding: 52px 15px 85px;
   }
@@ -202,11 +212,13 @@
   font-size: 16px;
   line-height: 19px;
   font-weight: 500;
+  margin-top: auto;
   color: $color-bg-base;
   background-color: $color-design;
 
   @media ($mobile) {
     display: block;
+    width: 290px;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
@@ -226,24 +238,27 @@
     }
   }
 
-  &--credit {
-    font-weight: 500;
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-      transition: 0.9s;
-    }
-
-    &:active {
-      opacity: 0.3;
-      transition: 0.9s;
+  &--insurance {
+    @media ($mobile) {
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
   }
+}
 
-  &--insurance {
-    padding: 13px 31px;
+.service__link-calc {
+  font-weight: 500;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    transition: 0.9s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.9s;
   }
 }
 
@@ -271,6 +286,12 @@
   }
 
   &--insurance {
+    margin-top: 57px;
+
+    @media ($tablet) {
+      margin-top: 0;
+    }
+
     @media ($mobile) {
       top: 94px;
     }

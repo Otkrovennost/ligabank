@@ -1,7 +1,5 @@
 import Swiper from 'swiper';
 
-const breakpoint = window.matchMedia(`(min-width: 1024px)`);
-
 const sliderAnimation = () => {
   const swiper = new Swiper(`.swiper-container`, {
     loop: true,
@@ -27,21 +25,41 @@ const sliderAnimation = () => {
   });
 };
 
-let tabsSlider = () => {
+let addSwiperServices = () => {
+  const breakpoint = window.matchMedia(`(min-width:1024px)`);
+  let swiperServices;
 
-  let breakpointChecker = () => {
+  const breakpointChecker = () => {
+
     if (breakpoint.matches === true) {
-      swiper.destroy(true, true);
+      if (swiperServices) {
+        swiperServices.destroy(true, true);
+      }
+      return;
     } else if (breakpoint.matches === false) {
-      return sliderAnimation();
+      return enableSwiper();
     }
+  };
+
+  const enableSwiper = () => {
+    swiperServices = new Swiper(`.swiper-services`, {
+      loop: true,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 4000,
+      },
+      pagination: {
+        el: `.swiper-pagination-services`,
+        clickable: false
+      },
+    });
   };
 
   breakpoint.addListener(breakpointChecker);
 
   breakpointChecker();
-}
+};
 
 export {
-  sliderAnimation, tabsSlider
+  sliderAnimation, addSwiperServices
 };

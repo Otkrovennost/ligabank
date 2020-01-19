@@ -1,5 +1,5 @@
 import {
-  sliderAnimation, tabsSlider
+  sliderAnimation, addSwiperServices
 } from "./swiper.js";
 
 const sliderBlock = document.querySelector(`.teasers`);
@@ -10,5 +10,5 @@ if (sliderBlock) {
 }
 
 if (sliderTabsBlock) {
-  tabsSlider();
+  addSwiperServices();
 }
