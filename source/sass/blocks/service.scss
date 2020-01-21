@@ -148,14 +148,10 @@
   @media ($mobile) {
     display: block;
     width: 290px;
-    padding: 15px 31px;
+    padding: 13px 31px;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
-  }
-
-  @media ($mobile) {
-    padding: 13px 31px;
   }
 
   .service__link-main {
