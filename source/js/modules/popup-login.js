@@ -5,13 +5,11 @@ const popupSubmitBtn = popupElement.querySelector(`.popup-login__submit`);
 const userName = popupElement.querySelector(`[name = login]`);
 const userPassword = popupElement.querySelector(`[name = password]`);
 const eyeIcon = popupElement.querySelector(`.form__icon`);
-// const overlayBlock = document.querySelector(`.login`);
 let storageName = localStorage.getItem(`login`);
 let storagePassword = localStorage.getItem(`password`);
 
 let popupCloserHandler = () => {
   popupElement.classList.remove(`popup-login--show`);
-  // overlayBlock.classList.remove(`overlay`);
 };
 
 let saveInLocalStorageHandler = () => {
@@ -63,7 +61,6 @@ let showPasswordHandler = (evt) => {
 let popupOpenHandler = () => {
   if (popupElement) {
     popupElement.classList.add(`popup-login--show`);
-    // overlayBlock.classList.add(`overlay`);
     userName.focus();
     getInLocalStorage();
   }

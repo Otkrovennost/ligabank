@@ -41,6 +41,12 @@
   }
 }
 
+.swiper-services .swiper-pagination-bullets {
+  @media ($mobile) {
+    bottom: 12px;
+  }
+}
+
 .swiper-pagination-services .swiper-pagination-bullet-active {
   background-color: #e0e0e0;
 }

@@ -1,4 +1,16 @@
 .service {
+  height: auto;
+  box-sizing: border-box;
+  padding: 62px 135px 60px 70px;
+
+  @media ($tablet) {
+    padding: 55px 5px 60px 45px;
+  }
+
+  @media ($mobile) {
+    padding: 52px 15px 60px;
+  }
+
   b {
     display: block;
     margin-bottom: 27px;
@@ -19,122 +31,67 @@
       line-height: 22px;
     }
   }
-}
-
-.service--credit {
-  b {
-    width: 70%;
-
-    @media ($mobile) {
-      width: 208px;
-    }
-  }
 
   p {
+    width: 85%;
     margin: 0;
-    padding-right: 95px;
     line-height: 25px;
 
     @media ($tablet) {
-      padding-right: 20px;
       font-size: 16px;
       line-height: 22px;
     }
 
     @media ($mobile) {
-      width: 298px;
+      width: 288px;
       font-size: 14px;
       line-height: 20px;
     }
   }
-}
 
-.service--insurance {
-  b {
-    width: 90%;
+  img {
+    width: 440px;
+    height: 290px;
 
     @media ($tablet) {
-      width: 80%;
+      width: auto;
+      height: 260px;
+      margin: 0;
+      margin-left: 30px;
+      margin-top: 7px;
     }
 
     @media ($mobile) {
-      width: 250px;
-    }
-  }
-}
-
-.service--mobile {
-  b {
-    width: 100%;
-    margin-bottom: 27px;
-
-    @media ($tablet) {
-      margin-bottom: 24px;
-    }
-
-    @media ($mobile) {
-      width: 230px;
+      position: absolute;
+      width: 87px;
+      height: 113px;
+      top: 89px;
+      right: 0;
     }
   }
 }
 
 .service__content {
-  width: 50%;
-  padding: 62px 110px 60px 70px;
+  width: 43%;
   box-sizing: border-box;
 
   @media ($tablet) {
-    width: 52%;
-    padding: 55px 5px 60px 45px;
-  }
-
-  @media ($mobile) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 52px 15px 60px;
-  }
-}
-
-.service--credit .service__content {
-  padding: 62px 50px 60px 70px;
-
-  @media ($tablet) {
-    padding: 55px 5px 60px 45px;
-  }
-
-  @media ($mobile) {
-    padding: 52px 15px 85px;
-  }
-}
-
-.service--insurance .service__content {
-  @media ($mobile) {
-    padding: 52px 15px 95px;
-  }
-}
-
-.service--mobile .service__content {
-  padding: 62px 85px 60px 70px;
-
-  @media ($tablet) {
-    padding: 62px 15px 60px 45px;
+    width: 50%;
   }
 
   @media ($mobile) {
     width: 100%;
-    padding: 52px 15px 50px;
   }
 }
 
 .service__inner-list {
-  margin: 0 0 21px 0;
+  margin: 0 0 22px 0;
   padding: 0;
   line-height: 24px;
   list-style: none;
 
   @media ($tablet) {
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0;
     font-size: 16px;
     line-height: 21px;
   }
@@ -142,27 +99,24 @@
   @media ($mobile) {
     position: relative;
     width: 229px;
-    margin: 0 0 11px 0;
+    margin: 0 0 12px 0;
     font-size: 14px;
     line-height: 17px;
     z-index: 10;
   }
 }
 
-.service--credit .service__inner-list {
-  margin-bottom: 14px;
-
-  @media ($mobile) {
-    margin-bottom: 7px;
-  }
-}
-
 .service__inner-item {
   position: relative;
-  padding-bottom: 14px;
+  padding-bottom: 13px;
   padding-left: 20px;
 
+  @media ($tablet) {
+    padding-bottom: 15px;
+  }
+
   @media ($mobile) {
+    padding-bottom: 14px;
     padding-left: 15px;
   }
 
@@ -181,70 +135,44 @@
       left: -2px;
     }
   }
-
-  &--bank {
-    width: 245px;
-
-    @media ($tablet) {
-      width: 220px;
-    }
-
-    @media ($mobile) {
-      width: 190px;
-    }
-  }
-
-  &--transit {
-    width: 360px;
-
-    @media ($tablet) {
-      width: 348px;
-    }
-
-    @media ($mobile) {
-      width: 210px;
-    }
-  }
 }
 
 .service__link {
-  padding: 15px 31px;
+  padding: 16px 31px;
   font-size: 16px;
   line-height: 19px;
   font-weight: 500;
-  margin-top: auto;
   color: $color-bg-base;
   background-color: $color-design;
 
   @media ($mobile) {
     display: block;
     width: 290px;
+    padding: 15px 31px;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
   }
 
-  &--advantages-main {
+  @media ($mobile) {
+    padding: 13px 31px;
+  }
+
+  .service__link-main {
     @media ($mobile) {
       display: none;
     }
   }
 
-  &--advantages-mob {
+  .service__link-mobile {
     display: none;
 
     @media ($mobile) {
       display: block;
     }
   }
-
-  &--insurance {
-    @media ($mobile) {
-      padding-top: 13px;
-      padding-bottom: 13px;
-    }
-  }
 }
+
 
 .service__link-calc {
   font-weight: 500;
@@ -263,56 +191,9 @@
 }
 
 .service__img {
-  width: 440px;
-  height: 290px;
-  margin-top: 69px;
-  margin-left: 10px;
+  margin-left: auto;
 
   @media ($tablet) {
-    position: absolute;
-    width: auto;
-    height: 260px;
-    margin: 0;
-    top: 61px;
-    right: 47px;
-  }
-
-  @media ($mobile) {
-    position: absolute;
-    width: 87px;
-    height: 113px;
-    top: 96px;
-    right: 0;
-  }
-
-  &--insurance {
-    margin-top: 57px;
-
-    @media ($tablet) {
-      margin-top: 0;
-    }
-
-    @media ($mobile) {
-      top: 94px;
-    }
-  }
-
-  &--card {
-    @media ($mobile) {
-      top: 95px;
-    }
-  }
-
-  &--mobile {
-    margin-top: 62px;
-
-    @media ($tablet) {
-      margin: 0;
-      top: 67px;
-    }
-
-    @media ($mobile) {
-      top: 97px;
-    }
+    margin-left: 0;
   }
 }

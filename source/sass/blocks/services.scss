@@ -1,6 +1,20 @@
 .services {
+  padding-top: 60px;
   font-size: 18px;
   line-height: 21px;
+
+
+  @media ($tablet) {
+    padding-top: 0;
+  }
+}
+
+.services__inner {
+  overflow: hidden;
+
+  @media ($tablet) {
+    overflow: visible;
+  }
 }
 
 .services__tab-list {
@@ -79,27 +93,19 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  transition: 0.9s;
 }
 
 .services__item {
-  display: none;
-  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-bg-base;
 
   @media ($tablet) {
-    position: relative;
-    display: block;
     background-color: $color-bg-base;
   }
 
   @media ($mobile) {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
   }
-}
-
-.services__item--show {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $color-bg-base;
 }
