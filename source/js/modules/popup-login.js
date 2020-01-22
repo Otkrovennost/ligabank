@@ -1,3 +1,7 @@
+import {
+  disableScrolling, enableScrolling
+} from "./scroll.js";
+
 const ESC_KEYCODE = 27;
 const popupElement = document.querySelector(`.popup-login`);
 const popupClose = popupElement.querySelector(`.popup-login__close`);
@@ -10,6 +14,7 @@ let storagePassword = localStorage.getItem(`password`);
 
 let popupCloserHandler = () => {
   popupElement.classList.remove(`popup-login--show`);
+  enableScrolling();
 };
 
 let saveInLocalStorageHandler = () => {
@@ -63,6 +68,7 @@ let popupOpenHandler = () => {
     popupElement.classList.add(`popup-login--show`);
     userName.focus();
     getInLocalStorage();
+    disableScrolling();
   }
 
   popupClose.addEventListener(`click`, popupCloserHandler);

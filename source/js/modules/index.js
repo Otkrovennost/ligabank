@@ -1,5 +1,5 @@
 import {
-  navMain, navToggler, openMenu
+  navMain, navToggler, openMenu, scrollToContent
 } from "./nav.js";
 import {
   eyeIcon, popupOpenHandler, saveInLocalStorageHandler, showPasswordHandler
@@ -19,6 +19,7 @@ if (navMain) {
 
   navItemLinks.forEach(function (elem) {
     elem.addEventListener(`click`, openMenu);
+    scrollToContent();
   });
 }
 

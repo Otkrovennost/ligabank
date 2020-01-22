@@ -12,23 +12,25 @@ let openMenu = () => {
   }
 };
 
-// let scrollToContent = () => {
-//   const anchors = document.querySelectorAll(`a[href*="#"]`)
+let scrollToContent = () => {
+  const anchors = document.querySelectorAll(`a[href*="#"]`);
 
-//   for (let anchor of anchors) {
-//     anchor.addEventListener(`click`, function (e) {
-//       e.preventDefault()
+  for (let anchor of anchors) {
+    anchor.addEventListener(`click`, function (evt) {
+      evt.preventDefault();
 
-//       const blockID = anchor.getAttribute(`href`).substr(1)
+      const blockId = anchor.getAttribute(`href`);
 
-//       document.getElementById(blockID).scrollIntoView({
-//         behavior: `smooth`,
-//         block: `start`
-//       })
-//     })
-//   }
-// };
+      if (blockId !== `#`) {
+        document.querySelector(`` + blockId).scrollIntoView({
+          behavior: `smooth`,
+          block: `start`
+        });
+      }
+    });
+  }
+};
 
 export {
-  navMain, navToggler, openMenu
+  navMain, navToggler, openMenu, scrollToContent
 };
