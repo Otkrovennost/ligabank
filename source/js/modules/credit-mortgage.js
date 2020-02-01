@@ -41,7 +41,7 @@ const inputCreditSum = offerForm.querySelector(`.offer__item input[name=credit-n
 const inputCreditSumLabel = offerForm.querySelector(`.offer__item label[data-name=credit-name]`);
 const inputCreditPercent = offerForm.querySelector(`.offer__item input[name=credit-percent]`);
 const inputCreditMonthlyPayment = offerForm.querySelector(`.offer__item input[name=credit-monthly-payment]`);
-// const inputCreditIncome = offerForm.querySelector(`.offer__item input[name=credit-income]`);
+const inputCreditIncome = offerForm.querySelector(`.offer__item input[name=credit-income]`);
 let scaleControlNumber;
 let inputCurrentValue;
 let currentCreditSum;
@@ -84,12 +84,16 @@ let calculateMonthlyPayment = () => {
 
   monthlyPayment = creditSumValue * (monthlyPercentValue + (monthlyPercentValue / (Math.pow((1 + monthlyPercentValue), creditPeriod) - 1)));
   inputCreditMonthlyPayment.value = prettifyRubbles(String(monthlyPayment.toFixed()));
+
+  calculateIncomeForCredit();
 };
 
-// let calculateIncomeForCredit = () => {
-//   let creditMonthlyPayment = parseInt(clearString(inputCreditMonthlyPayment.value), 10);
-//   let incomeForCredit;
-// };
+let calculateIncomeForCredit = () => {
+  let creditMonthlyPayment = parseInt(clearString(inputCreditMonthlyPayment.value), 10);
+  let incomeForCredit = creditMonthlyPayment * 100 / 45;
+
+  inputCreditIncome.value = prettifyRubbles(String(incomeForCredit.toFixed()));
+};
 
 let getCreditMortgageSum = () => {
   let inputMortgageContributionValue = parseInt(clearString(inputMortgageContribution.value), 10);
