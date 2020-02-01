@@ -42,6 +42,12 @@ const inputCreditSumLabel = offerForm.querySelector(`.offer__item label[data-nam
 const inputCreditPercent = offerForm.querySelector(`.offer__item input[name=credit-percent]`);
 const inputCreditMonthlyPayment = offerForm.querySelector(`.offer__item input[name=credit-monthly-payment]`);
 const inputCreditIncome = offerForm.querySelector(`.offer__item input[name=credit-income]`);
+const requestForm = document.querySelector(`.request`);
+const requestInputCreditName = requestForm.querySelector(`.request__item input[name=request-credit-name]`);
+const requestCostObject = requestForm.querySelector(`.request__item input[name=request-object-cost]`);
+const requestContribution = requestForm.querySelector(`.request__item input[name=request-first-contribution]`);
+const requestCreditTerm = requestForm.querySelector(`.request__item input[name=request-credit-term]`);
+const requestCreditLink = document.querySelector(`.offer__link`);
 let scaleControlNumber;
 let inputCurrentValue;
 let currentCreditSum;
@@ -234,7 +240,7 @@ let changeInputContributionValue = () => {
 
 let setMinCreditTerm = () => {
   rangeTerm.value = rangeTermMin;
-  // inputTermValue.value = prettifyYears(String(rangeTerm.value));
+  inputTermValue.value = prettifyYears(String(rangeTerm.value));
 };
 
 let changeCreditTerm = () => {
@@ -264,6 +270,18 @@ let minAndMaxTermHandler = () => {
 let contributionPercentHandler = () => {
   setPercentValue();
   calculatePercentRate();
+  issueRequestHandler();
+};
+
+let issueRequestHandler = () => {
+  inputCurrentValue = parseInt(clearString(inputMortgageCost.value), 10);
+  let inputMortgageContributionValue = parseInt(clearString(inputMortgageContribution.value), 10);
+  let inputTermCurrentValue = parseInt(clearString(inputTermValue.value), 10);
+
+  requestInputCreditName.value = creditOffer.mortgage.creditGoal;
+  requestCostObject.value = prettifyRubbles(String(inputCurrentValue));
+  requestContribution.value = prettifyRubbles(String(inputMortgageContributionValue));
+  requestCreditTerm.value = prettifyYears(String(inputTermCurrentValue));
 };
 
 let creditMortgageCalculator = () => {
@@ -281,6 +299,7 @@ let creditMortgageCalculator = () => {
   rangeTerm.addEventListener(`change`, changeCreditTerm);
   inputTermValue.addEventListener(`input`, changeInputTermValue);
   inputTermValue.addEventListener(`change`, minAndMaxTermHandler);
+  requestCreditLink.addEventListener(`click`, issueRequestHandler);
 };
 
 export {
