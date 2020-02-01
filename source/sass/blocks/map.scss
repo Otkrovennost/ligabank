@@ -1,0 +1,125 @@
+.map {
+  margin-bottom: 108px;
+  padding-top: 62px;
+
+  @media ($tablet) {
+    margin-bottom: 82px;
+    padding: 32px 45px 0 45px;
+  }
+
+  @media ($mobile) {
+    margin-bottom: 60px;
+    padding: 29px 0 0 0;
+  }
+
+  h2 {
+    margin: 0 0 60px 0;
+    font-size: 41px;
+    line-height: 57px;
+
+    @media ($tablet) {
+      margin: 0 0 33px 0;
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @media ($mobile) {
+      margin: 0 0 27px;
+      padding: 0 15px;
+      font-size: 22px;
+      line-height: 31px;
+    }
+  }
+}
+
+.map__filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+  background-color: $color-bg-base;
+  list-style: none;
+
+  @media ($mobile) {
+    padding: 18px;
+  }
+}
+
+.map__filters-item {
+  position: relative;
+  width: 100px;
+  box-sizing: border-box;
+  padding-left: 45px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media ($mobile) {
+    width: auto;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  input + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 19px;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-design;
+    border-radius: 2px;
+  }
+
+  input:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 19px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/bg/icon-checkbox.svg");
+    background-repeat: no-repeat;
+  }
+
+  input:focus + label::before,
+  input:hover + label::before {
+    border: 1px solid #003399;
+  }
+}
+
+.map__block {
+  height: 462px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg/map-desktop@1x.png");
+
+
+  @media ($retina) {
+    background-image: url("../img/bg/map-desktop@2x.png");
+  }
+
+  @media ($tablet) {
+    background-image: url("../img/bg/map-tablet@1x.png");
+  }
+
+  @media ($tablet) and ($retina) {
+    background-image: url("../img/bg/map-tablet@2x.png");
+  }
+
+  @media ($mobile) {
+    background-image: url("../img/bg/map-mobile@1x.png");
+  }
+
+  @media ($mobile) and ($retina) {
+    background-image: url("../img/bg//map-mobile@2x.png");
+  }
+
+  @media ($mobile) {
+    height: 381px;
+  }
+}

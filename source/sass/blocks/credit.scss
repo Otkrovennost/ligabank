@@ -1,0 +1,202 @@
+.credit {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 95px;
+
+  @media ($tablet) {
+    padding: 68px 45px 0 45px;
+  }
+
+  @media ($mobile) {
+    padding: 48px 15px 0;
+  }
+
+  h2 {
+    width: 100%;
+    margin: 0 0 50px 0;
+    padding-right: 50px;
+    font-size: 41px;
+    line-height: 58px;
+
+    @media ($tablet) {
+      margin: 0 0 28px 0;
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @media ($mobile) {
+      margin: 0 0 20px;
+      padding-right: 0;
+      font-size: 22px;
+      line-height: 31px;
+    }
+  }
+
+  h3 {
+    margin: 0 0 15px 0;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+
+    @media ($tablet) {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @media ($mobile) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.credit__inner {
+  width: 51%;
+
+  @media ($tablet) {
+    width: 100%;
+  }
+}
+
+.credit__goal {
+  width: 100%;
+}
+
+.credit__calculator {
+  width: 100%;
+}
+
+.credit__block {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.credit__item {
+  margin-bottom: 18px;
+
+  @media ($tablet) {
+    margin-bottom: 12px;
+  }
+
+  @media ($mobile) {
+    margin-bottom: 9px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+  }
+
+  input {
+    width: 100%;
+    padding: 16px 50px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid $color-default;
+    border-radius: 4px;
+
+    @media ($tablet) {
+      padding: 18px 50px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.credit__checker {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  label {
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+
+    @media ($mobile) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.credit__checker-item {
+  margin-bottom: 10px;
+
+  input + label::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-design;
+    border-radius: 2px;
+  }
+
+  input:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/bg/icon-checkbox.svg");
+    background-repeat: no-repeat;
+  }
+
+  input:focus + label::before,
+  input:hover + label::before {
+    border: 1px solid #003399;
+  }
+}
+
+.credit__offer {
+  width: 43%;
+  margin-left: auto;
+
+  @media ($tablet) {
+    width: 100%;
+    padding-top: 28px;
+  }
+
+  @media ($mobile) {
+    padding-top: 20px;
+  }
+}
+
+.credit__request {
+  display: none;
+  width: 770px;
+  margin: 56px auto 0 auto;
+  padding: 64px 70px 70px;
+  background-color: $color-bg-base;
+
+  @media ($tablet) {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+  }
+
+  @media ($mobile) {
+    width: 290px;
+    padding: 44px 0 70px;
+  }
+
+  &--active {
+    display: block;
+  }
+}

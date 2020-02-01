@@ -11,3 +11,38 @@
     box-shadow: 0 0 0 2px $color-design inset, 0 0 0 4px #ffffff inset;
   }
 }
+
+.button--closer {
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  overflow: visible;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #1f1e25;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0 0 10px 3px $color-design;
+  }
+}

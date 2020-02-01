@@ -1,0 +1,158 @@
+.offer {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  h3 {
+    width: 100%;
+    margin: 0 0 22px 0;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+
+    @media ($mobile) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background-color: $color-bg-base;
+
+    @media ($desktop-plus) {
+      padding: 60px;
+    }
+
+    @media ($tablet) {
+      padding: 54px 60px;
+    }
+
+    @media ($mobile) {
+      padding: 35px 15px 40px 15px;
+    }
+  }
+
+  input {
+    width: 100%;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    background-color: transparent;
+    border: none;
+
+    @media ($mobile) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  label {
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+  }
+}
+
+.offer--hidden form {
+  display: none;
+}
+
+.offer__item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-bottom: 26px;
+
+  @media ($tablet) {
+    width: 40%;
+  }
+
+  @media ($mobile) {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &:nth-of-type(2n) {
+    width: 41%;
+    margin-left: auto;
+
+    @media ($tablet) {
+      width: 40%;
+      margin-left: 0;
+    }
+
+    @media ($mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.offer__link {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  text-align: center;
+  color: #ffffff;
+  background-color: $color-design;
+
+  @media ($mobile) {
+    width: 260px;
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.offer__error {
+  display: none;
+  padding: 54px 50px 55px 58px;
+  background-color: $color-bg-base;
+
+  @media ($tablet) {
+    padding-right: 220px;
+  }
+
+  @media ($mobile) {
+    padding: 34px 10px 33px 16px;
+  }
+
+  b {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+
+    @media ($tablet) {
+      width: 360px;
+    }
+
+    @media ($mobile) {
+      width: 220px;
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+  }
+
+  &--show {
+    display: block;
+  }
+}

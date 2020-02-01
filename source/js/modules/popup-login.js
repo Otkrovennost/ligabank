@@ -12,6 +12,7 @@ const eyeIcon = popupElement.querySelector(`.form__icon`);
 let storageName = localStorage.getItem(`login`);
 let storagePassword = localStorage.getItem(`password`);
 
+
 let popupCloserHandler = () => {
   popupElement.classList.remove(`popup-login--show`);
   enableScrolling();

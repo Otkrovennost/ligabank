@@ -1,0 +1,145 @@
+.request {
+  h3 {
+    margin-bottom: 14px;
+    text-align: center;
+
+    @media ($tablet) {
+      margin-bottom: 28px;
+    }
+
+    @media ($mobile) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+.request__item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #c4c4c4;
+
+  input {
+    width: 50%;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+
+    @media ($mobile) {
+      order: 1;
+      width: 100%;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: left;
+    }
+  }
+
+  label {
+    width: 50%;
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+
+    @media ($mobile) {
+      order: 2;
+      width: 100%;
+    }
+  }
+}
+
+.request__input {
+  input {
+    margin-top: 31px;
+    padding: 20px 25px;
+    font-size: 18px;
+    line-height: 25px;
+    border: 1px solid #0a1e32;
+    border-radius: 4px;
+
+    @media ($tablet) {
+      padding: 16px 25px;
+    }
+
+    @media ($mobile) {
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding: 18px 25px 18px 14px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &--user-name {
+    @media ($mobile) {
+      margin-top: 30px;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &--contacts {
+    display: flex;
+    flex-wrap: wrap;
+
+    input {
+      width: 300px;
+
+      @media ($tablet) {
+        width: 325px;
+      }
+
+      &:last-of-type {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.request__submit {
+  width: 198px;
+  margin: 40px auto 0 auto;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  background-color: $color-design;
+  cursor: pointer;
+
+  @media ($tablet) {
+    width: 100%;
+    padding: 17px;
+  }
+
+  @media ($mobile) {
+    margin: 10px auto 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.request__submit-main {
+  @media ($mobile) {
+    display: none;
+  }
+}
+
+.request__submit-mobile {
+  display: none;
+
+  @media ($mobile) {
+    display: block;
+  }
+}

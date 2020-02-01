@@ -13,232 +13,534 @@
 </head>
 
 <body class="page">
-  <h1 class="visually-hidden">Лига Банк</h1>
-  <header class="header">
-    <nav class="header__nav nav nav--nojs nav__wrapper">
-      <button class="nav__toggler" aria-label="Показать или скрыть меню">
-      </button>
-      <a class="nav__logo" aria-label="Логотип кампании">
-        <img src="img/content/logo.svg" width="150" height="27" alt="Логотип Лига Банк">
-      </a>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="#services">Услуги</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Рассчитать кредит</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Контакты</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Задать вопрос</a>
-        </li>
-      </ul>
-      <a class="nav__user-link" href="#" aria-label="Авторизация">
-        <svg width="20" height="22">
-          <use xlink:href="img/sprite_auto.svg#icon-login"></use>
-        </svg>
-        <span>Войти в Интернет-банк</span>
-      </a>
-    </nav>
-  </header>
-  <main class="content">
-    <section class="content__teasers teasers swiper-container">
-      <h3 class="visually-hidden">Тизеры</h3>
-      <ul class="teasers__list swiper-wrapper">
-        <li class="teasers__item teasers__item--card swiper-slide">
-          <div class="teasers__content container">
-            <h3>Лига Банк</h3>
-            <p>Кредиты на любой случай</p>
-            <a href="#" class="teasers__link button">Рассчитать кредит</a>
-          </div>
-        </li>
-        <li class="teasers__item teasers__item--man swiper-slide">
-          <div class="teasers__content teasers__content--man container">
-            <h3>Лига Банк</h3>
-            <p>Ваша уверенность в завтрашнем дне</p>
-          </div>
-        </li>
-        <li class="teasers__item teasers__item--girl swiper-slide">
-          <div class="teasers__content container">
-            <h3>Лига Банк</h3>
-            <p>Всегда рядом</p>
-            <a href="#" class="teasers__link button">Найти отделение</a>
-          </div>
-        </li>
-      </ul>
-      <div class="swiper-pagination"></div>
-    </section>
-    <section class="services container" id="services">
-      <div class="services__inner swiper-services">
-        <h2 class="visually-hidden">Услуги, оказываемые банком</h2>
-        <ul class="services__tab-list">
-          <li class="services__tab-item services__tab-item--show">
-            <a class="services__tab-link services__tab-link--advantages" href="#nowhere">
-              <svg width="34" height="33">
-                <use xlink:href="img/sprite_auto.svg#icon-vault"></use>
-              </svg>
-              <span>Вклады</span>
-            </a>
+  <div class="page-content">
+    <h1 class="visually-hidden">Лига Банк</h1>
+    <header class="header">
+      <nav class="header__nav nav nav--nojs nav__wrapper">
+        <button class="nav__toggler" aria-label="Показать или скрыть меню">
+        </button>
+        <a class="nav__logo" aria-label="Логотип кампании">
+          <img src="img/content/logo.svg" width="150" height="27" alt="Логотип Лига Банк">
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#services">Услуги</a>
           </li>
-          <li class="services__tab-item">
-            <a class="services__tab-link services__tab-link--card" href="#nowhere">
-              <svg width="34" height="30">
-                <use xlink:href="img/sprite_auto.svg#icon-cards"></use>
-              </svg>
-              <span>Кредиты</span>
-            </a>
+          <li class="nav__item">
+            <a class="nav__link" href="#calculator">Рассчитать кредит</a>
           </li>
-          <li class="services__tab-item">
-            <a class="services__tab-link services__tab-link--insurance" href="#nowhere">
-              <svg width="28" height="34">
-                <use xlink:href="img/sprite_auto.svg#icon-security"></use>
-              </svg>
-              <span>Страхование</span>
-            </a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Контакты</a>
           </li>
-          <li class="services__tab-item">
-            <a class="services__tab-link services__tab-link--mobile" href="#nowhere">
-              <svg width="20" height="34">
-                <use xlink:href="img/sprite_auto.svg#icon-phone-tab"></use>
-              </svg>
-              <span>Онлайн-сервисы</span>
-            </a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Задать вопрос</a>
           </li>
         </ul>
-        <ul class="services__list swiper-wrapper">
-          <li class="services__item service swiper-slide">
-            <div class="service__content">
-              <b>Вклады Лига Банка – это выгодная инвестиция в свое будущее</b>
-              <ul class="service__inner-list">
-                <li class="service__inner-item">
-                  Проценты по вкладам до 7%
-                </li>
-                <li class="service__inner-item">
-                  Разнообразные условия
-                </li>
-                <li class="service__inner-item">
-                  Возможность ежемесячной капитализации
-                  или&nbsp;вывод процентов на банковскую карту
-                </li>
-              </ul>
-              <a class="service__link button" href="#">
-                <span class="service__link-main">Узнать подробнее</span>
-                <span class="service__link-mobile">Рассчитать кредит</span>
+        <a class="nav__user-link" href="#" aria-label="Авторизация">
+          <svg width="20" height="22">
+            <use xlink:href="img/sprite_auto.svg#icon-login"></use>
+          </svg>
+          <span>Войти в Интернет-банк</span>
+        </a>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="content__teasers teasers swiper-container">
+        <h3 class="visually-hidden">Тизеры</h3>
+        <ul class="teasers__list swiper-wrapper">
+          <li class="teasers__item teasers__item--card swiper-slide">
+            <div class="teasers__content container">
+              <h3>Лига Банк</h3>
+              <p>Кредиты на любой случай</p>
+              <a href="#" class="teasers__link button">Рассчитать кредит</a>
+            </div>
+          </li>
+          <li class="teasers__item teasers__item--man swiper-slide">
+            <div class="teasers__content teasers__content--man container">
+              <h3>Лига Банк</h3>
+              <p>Ваша уверенность в завтрашнем дне</p>
+            </div>
+          </li>
+          <li class="teasers__item teasers__item--girl swiper-slide">
+            <div class="teasers__content container">
+              <h3>Лига Банк</h3>
+              <p>Всегда рядом</p>
+              <a href="#" class="teasers__link button">Найти отделение</a>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </section>
+      <section class="services container" id="services">
+        <div class="services__inner swiper-services">
+          <h2 class="visually-hidden">Услуги, оказываемые банком</h2>
+          <ul class="services__tab-list">
+            <li class="services__tab-item services__tab-item--show">
+              <a class="services__tab-link services__tab-link--advantages" href="#nowhere">
+                <svg width="34" height="33">
+                  <use xlink:href="img/sprite_auto.svg#icon-vault"></use>
+                </svg>
+                <span>Вклады</span>
               </a>
-            </div>
-            <div class="service__img">
-              <picture>
-                <source type="image/webp" media="(max-width: 768px)" srcset="img/content/piggybank-mobile@1x.webp 1x, img/content/piggybank-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/piggybank-tablet@1x.webp 1x, img/content/piggybank-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/content/piggybank-desktop@1x.webp 1x, img/content/piggybank-desktop@2x.webp 2x">
-                <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
-                <source media="(max-width: 768px)" srcset="img/content/piggybank-mobile@1x.png 1x, img/content/piggybank-mobile@2x.png 2x">
-                <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
-                <source media="(max-width: 1023px)" srcset="img/content/piggybank-tablet@1x.png 1x, img/content/piggybank-tablet@2x.png 2x">
-                <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
-                <img src="img/content/piggybank-desktop@1x.png" srcset="img/content/piggybank-desktop@2x.png 2x" width="440" height="290" alt="Картинка копилки">
-              </picture>
-            </div>
-          </li>
-          <li class="services__item service swiper-slide">
-            <div class="service__content">
-              <b>Лига Банк выдает кредиты под&nbsp;любые&nbsp;цели</b>
-              <ul class="service__inner-list">
-                <li class="service__inner-item">
-                  Ипотечный кредит
+            </li>
+            <li class="services__tab-item">
+              <a class="services__tab-link services__tab-link--card" href="#nowhere">
+                <svg width="34" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-cards"></use>
+                </svg>
+                <span>Кредиты</span>
+              </a>
+            </li>
+            <li class="services__tab-item">
+              <a class="services__tab-link services__tab-link--insurance" href="#nowhere">
+                <svg width="28" height="34">
+                  <use xlink:href="img/sprite_auto.svg#icon-security"></use>
+                </svg>
+                <span>Страхование</span>
+              </a>
+            </li>
+            <li class="services__tab-item">
+              <a class="services__tab-link services__tab-link--mobile" href="#nowhere">
+                <svg width="20" height="34">
+                  <use xlink:href="img/sprite_auto.svg#icon-phone-tab"></use>
+                </svg>
+                <span>Онлайн-сервисы</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="services__list swiper-wrapper">
+            <li class="services__item service swiper-slide">
+              <div class="service__content">
+                <b>Вклады Лига Банка – это выгодная инвестиция в свое будущее</b>
+                <ul class="service__inner-list">
+                  <li class="service__inner-item">
+                    Проценты по вкладам до 7%
+                  </li>
+                  <li class="service__inner-item">
+                    Разнообразные условия
+                  </li>
+                  <li class="service__inner-item">
+                    Возможность ежемесячной капитализации
+                    или&nbsp;вывод процентов на банковскую карту
+                  </li>
+                </ul>
+                <a class="service__link button" href="#">
+                  <span class="service__link-main">Узнать подробнее</span>
+                  <span class="service__link-mobile">Рассчитать кредит</span>
+                </a>
+              </div>
+              <div class="service__img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/content/piggybank-mobile@1x.webp 1x, img/content/piggybank-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/piggybank-tablet@1x.webp 1x, img/content/piggybank-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/piggybank-desktop@1x.webp 1x, img/content/piggybank-desktop@2x.webp 2x">
+                  <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
+                  <source media="(max-width: 768px)" srcset="img/content/piggybank-mobile@1x.png 1x, img/content/piggybank-mobile@2x.png 2x">
+                  <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
+                  <source media="(max-width: 1023px)" srcset="img/content/piggybank-tablet@1x.png 1x, img/content/piggybank-tablet@2x.png 2x">
+                  <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
+                  <img src="img/content/piggybank-desktop@1x.png" srcset="img/content/piggybank-desktop@2x.png 2x" width="440" height="290" alt="Картинка копилки">
+                </picture>
+              </div>
+            </li>
+            <li class="services__item service swiper-slide">
+              <div class="service__content">
+                <b>Лига Банк выдает кредиты под&nbsp;любые&nbsp;цели</b>
+                <ul class="service__inner-list">
+                  <li class="service__inner-item">
+                    Ипотечный кредит
+                  </li>
+                  <li class="service__inner-item">
+                    Автокредит
+                  </li>
+                  <li class="service__inner-item">
+                    Потребительский кредит
+                  </li>
+                </ul>
+                <p>
+                  Рассчитайте ежемесячный платеж и&nbsp;ставку по кредиту
+                  воспользовавшись нашим <a class="service__link-calc" href="#">кредитным калькулятором</a>
+                </p>
+              </div>
+              <div class="service__img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/content/car-mobile@1x.webp 1x, img/content/car-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/car-tablet@1x.webp 1x, img/content/car-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/car-desktop@1x.webp 1x, img/content/car-desktop@2x.webp 2x">
+                  <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
+                  <source media="(max-width: 768px)" srcset="img/content/car-mobile@1x.png 1x, img/content/car-mobile@2x.png 2x">
+                  <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
+                  <source media="(max-width: 1023px)" srcset="img/content/car-tablet@1x.png 1x, img/content/car-tablet@2x.png 2x">
+                  <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
+                  <img src="img/content/car-desktop@1x.png" srcset="img/content/car-desktop@2x.png 2x" width="440" height="290" alt="Картинка машинки">
+                </picture>
+              </div>
+            </li>
+            <li class="services__item service swiper-slide">
+              <div class="service__content">
+                <b>Лига Страхование — застрахуем все&nbsp;что&nbsp;захотите</b>
+                <ul class="service__inner-list">
+                  <li class="service__inner-item">
+                    Автомобильное страхование
+                  </li>
+                  <li class="service__inner-item">
+                    Страхование жизни и здоровья
+                  </li>
+                  <li class="service__inner-item">
+                    Страхование недвижимости
+                  </li>
+                </ul>
+                <a class="service__link button" href="#">Узнать подробнее</a>
+              </div>
+              <div class="service__img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/content/lock-mobile@1x.webp 1x, img/content/lock-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/lock-tablet@1x.webp 1x, img/content/lock-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/lock-desktop@1x.webp 1x, img/content/lock-desktop@2x.webp 2x">
+                  <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
+                  <source media="(max-width: 768px)" srcset="img/content/lock-mobile@1x.png 1x, img/content/lock-mobile@2x.png 2x">
+                  <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
+                  <source media="(max-width: 1023px)" srcset="img/content/lock-tablet@1x.png 1x, img/content/lock-tablet@2x.png 2x">
+                  <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
+                  <img src="img/content/lock-desktop@1x.png" srcset="img/content/lock-desktop@2x.png 2x" width="440" height="290" alt="Картинка замка">
+                </picture>
+              </div>
+            </li>
+            <li class="services__item service swiper-slide">
+              <div class="service__content">
+                <b>Лига Банк — это огромное количество онлайн-сервисов для&nbsp;вашего&nbsp;удобства</b>
+                <ul class="service__inner-list">
+                  <li class="service__inner-item">
+                    Мобильный банк,
+                    <br>
+                    который всегда под рукой
+                  </li>
+                  <li class="service__inner-item">
+                    Приложение Лига-проездной позволит вам&nbsp;оплачивать билеты&nbsp;по&nbsp;всему&nbsp;миру
+                  </li>
+                </ul>
+                <a class="service__link button" href="#">Узнать подробнее</a>
+              </div>
+              <div class="service__img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/content/phone-mobile@1x.webp 1x, img/content/phone-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/phone-tablet@1x.webp 1x, img/content/phone-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/phone-desktop@1x.webp 1x, img/content/phone-desktop@2x.webp 2x">
+                  <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
+                  <source media="(max-width: 768px)" srcset="img/content/phone-mobile@1x.png 1x, img/content/phone-mobile@2x.png 2x">
+                  <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
+                  <source media="(max-width: 1023px)" srcset="img/content/phone-tablet@1x.png 1x, img/content/phone-tablet@2x.png 2x">
+                  <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
+                  <img src="img/content/phone-desktop@1x.png" srcset="img/content/phone-desktop@2x.png 2x" width="440" height="290" alt="Картинка мобильного телефона">
+                </picture>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-pagination-services"></div>
+        </div>
+      </section>
+      <section class="credit container">
+        <h2>Кредитный калькулятор</h2>
+        <div class="credit__inner">
+          <div class="credit__goal goal">
+            <h3>Шаг 1. Цель кредита</h3>
+            <form>
+              <input name="credit-goal" value="Выберите цель кредита" readonly="">
+              <svg class="goal__icon" width="18" height="11">
+                <use xlink:href="img/sprite_auto.svg#icon-check-down"></use>
+              </svg>
+              <ul class="goal__list">
+                <li class="goal__item">
+                  <a class="goal__link" href="#" data-key="0">Ипотечное кредитование</a>
                 </li>
-                <li class="service__inner-item">
-                  Автокредит
+                <li class="goal__item">
+                  <a class="goal__link" href="#" data-key="1">Автомобильное кредитование</a>
                 </li>
-                <li class="service__inner-item">
-                  Потребительский кредит
+                <li class="goal__item">
+                  <a class="goal__link" href="#" data-key="2">Потребительский кредит</a>
                 </li>
               </ul>
-              <p>
-                Рассчитайте ежемесячный платеж и&nbsp;ставку по кредиту
-                воспользовавшись нашим <a class="service__link-calc" href="#">кредитным калькулятором</a>
-              </p>
+            </form>
+          </div>
+          <div class="credit__calculator" id="calculator">
+            <div class="credit__block mortgage">
+              <h3>Шаг 2. Введите параметры кредита</h3>
+              <form>
+                <div class="mortgage__item credit__item">
+                  <label for="mortgage-cost">Стоимость недвижимости</label>
+                  <input name="mortgage-cost" type="text" id="mortgage-cost" maxlength="17" data-min="1200000" data-max="25000000" data-step="100000" data-input-value="rubbles" data-value="cost" value="2 000 000 рублей">
+                  <div class="mortgage__range-bar range-bar">
+                    <button class="range-bar__control range-bar__control--min" type="button" aria-label="Уменьшить значение"></button>
+                    <button class="range-bar__control range-bar__control--max" type="button" aria-label="Увеличить значение"></button>
+                    <span>От 1 200 000 до 25 000 000 рублей</span>
+                  </div>
+                </div>
+                <div class="mortgage__item credit__item">
+                  <label for="mortgage-contribution">Первоначальный взнос</label>
+                  <input name="mortgage-contribution" type="text" id="mortgage-contribution" maxlength="17" data-input-value="rubbles" value="200 000 рублей">
+                  <div class="mortgage__range range">
+                    <input type="range" name="contribution-range" min="10" max="100" step="5" data-min="10" data-max="100">
+                    <span data-value="persent">10 %</span>
+                  </div>
+                </div>
+                <div class="mortgage__item credit__item">
+                  <label for="mortgage-time">Срок кредитования</label>
+                  <input name="mortgage-time" type="text" id="mortgage-time" data-input-value="years" value="5 лет">
+                  <div class="mortgage__range range">
+                    <input type="range" name="term-range" min="5" max="30" step="1" data-min="5" data-max="30">
+                    <div class="range__term">
+                      <span>5 лет</span>
+                      <span>30 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <ul class="mortgage__checker credit__checker">
+                  <li class="credit__checker-item">
+                    <input class="visually-hidden" id="maternal-capital" name="maternal" type="checkbox" checked="">
+                    <label for="maternal-capital">Использовать материнский капитал</label>
+                  </li>
+                </ul>
+              </form>
             </div>
-            <div class="service__img">
-              <picture>
-                <source type="image/webp" media="(max-width: 768px)" srcset="img/content/car-mobile@1x.webp 1x, img/content/car-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/car-tablet@1x.webp 1x, img/content/car-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/content/car-desktop@1x.webp 1x, img/content/car-desktop@2x.webp 2x">
-                <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
-                <source media="(max-width: 768px)" srcset="img/content/car-mobile@1x.png 1x, img/content/car-mobile@2x.png 2x">
-                <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
-                <source media="(max-width: 1023px)" srcset="img/content/car-tablet@1x.png 1x, img/content/car-tablet@2x.png 2x">
-                <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
-                <img src="img/content/car-desktop@1x.png" srcset="img/content/car-desktop@2x.png 2x" width="440" height="290" alt="Картинка машинки">
-              </picture>
+            <div class="credit__block car-loan">
+              <h3>Шаг 2. Введите параметры кредита</h3>
+              <form>
+                <div class="car-loan__item credit__item">
+                  <label for="car-loan-cost">Стоимость aвтомобиля</label>
+                  <input name="car-loan" type="text" id="car-loan-cost" data-input-value="rubbles" data-value="cost" value="2 000 000 рублей">
+                  <div class="car-loan__range-bar range-bar">
+                    <button class="range-bar__control range-bar__control--min" type="button" aria-label="Уменьшить значение"></button>
+                    <button class="range-bar__control range-bar__control--max" type="button" aria-label="Увеличить значение"></button>
+                    <span>От 500 000 рублей до 5 000 000 рублей</span>
+                  </div>
+                </div>
+                <div class="car-loan__item credit__item">
+                  <label for="car-loan-contribution">Первоначальный взнос</label>
+                  <input name="car-loan" type="text" id="car-loan-contribution" data-input-value="rubbles" value="200 000 рублей">
+                  <div class="car-loan__range range">
+                    <input type="range" min="20" max="100" step="5" value="0">
+                    <span>20 %</span>
+                  </div>
+                </div>
+                <div class="car-loan__item credit__item">
+                  <label for="car-loan-time">Срок кредитования</label>
+                  <input name="car-loan-time" type="text" id="car-loan-time" data-input-value="years" value="1 год">
+                  <div class="car-loan__range range">
+                    <input type="range" min="1" max="5" step="1" value="0">
+                    <div class="range__term">
+                      <span>1 год</span>
+                      <span>5 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <ul class="car-loan__checker credit__checker">
+                  <li class="credit__checker-item">
+                    <input class="visually-hidden" id="insurance-car" name="insurance" type="checkbox">
+                    <label for="insurance-car">Оформить КАСКО в нашем банке</label>
+                  </li>
+                  <li class="credit__checker-item">
+                    <input class="visually-hidden" id="insurance-life" name="insurance" type="checkbox">
+                    <label for="insurance-life">Оформить Страхование жизни в нашем банке</label>
+                  </li>
+                </ul>
+              </form>
             </div>
+            <div class="credit__block consumer">
+              <h3>Шаг 2. Введите параметры кредита</h3>
+              <form>
+                <div class="consumer__item credit__item">
+                  <label for="consumer-cost">Сумма потребительского кредита</label>
+                  <input name="consumer" type="text" id="consumer-cost" data-input-value="rubbles" data-value="cost" value="2 000 000 рублей">
+                  <div class="consumer__range-bar range-bar">
+                    <button class="range-bar__control range-bar__control--min" type="button" aria-label="Уменьшить значение"></button>
+                    <button class="range-bar__control range-bar__control--max" type="button" aria-label="Увеличить значение"></button>
+                    <span>От 50 000 рублей до 3 000 000 рублей</span>
+                  </div>
+                </div>
+                <div class="consumer__item credit__item">
+                  <label for="consumer-time">Срок кредитования</label>
+                  <input name="consumer-time" type="text" id="consumer-time" data-input-value="years" value="1 год">
+                  <div class="consumer__range range">
+                    <input type="range" min="1" max="7" step="1" value="0">
+                    <div class="range__term">
+                      <span>1 год</span>
+                      <span>7 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <ul class="consumer__checker credit__checker">
+                  <li class="credit__checker-item">
+                    <input class="visually-hidden" id="salary-project" name="salary" type="checkbox">
+                    <label for="salary-project">Участник зарплатного проекта нашего банка</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="credit__offer offer">
+          <h2 class="visually-hidden">Предложение банка по кредиту</h2>
+          <form>
+            <h3>Наше предложение</h3>
+            <div class="offer__item">
+              <input value="1 330 000 рублей" name="credit-name" readonly="">
+              <label data-name="credit-name">Сумма ипотеки</label>
+            </div>
+            <div class="offer__item">
+              <input value="9,40%" name="credit-percent" readonly="">
+              <label>Процентная ставка</label>
+            </div>
+            <div class="offer__item">
+              <input value="27 868 рублей" name="credit-monthly-payment" readonly="">
+              <label>Ежемесячный платеж</label>
+            </div>
+            <div class="offer__item">
+              <input value="61 929 рублей" name="credit-income" readonly="">
+              <label>Необходимый доход</label>
+            </div>
+            <a href="#" class="offer__link button">Оформить заявку</a>
+          </form>
+          <div class="offer__error">
+            <b>Наш банк не выдаёт <span>ипотечные</span> кредиты меньше 500 000 рублей.</b>
+            <p>Попробуйте использовать другие параметры&nbsp;для&nbsp;расчёта.</p>
+          </div>
+        </div>
+        <div class="credit__request request">
+          <h3>Шаг 3. Оформление заявки</h3>
+          <form action="#">
+            <div class="request__item">
+              <label>Номер заявки</label>
+              <input value="№ 0010" readonly="">
+            </div>
+            <div class="request__item">
+              <label>Цель кредита</label>
+              <input value="Ипотека" readonly="">
+            </div>
+            <div class="request__item">
+              <label>Стоимость недвижимости</label>
+              <input value="2 000 000 рублей" readonly="">
+            </div>
+            <div class="request__item">
+              <label>Первоначальный взнос</label>
+              <input value="200 000 рублей" readonly="">
+            </div>
+            <div class="request__item">
+              <label>Срок кредитования</label>
+              <input value="5 лет" readonly="">
+            </div>
+            <div class="request__input request__input--user-name">
+              <input name="user-name" id="request-user-name" type="text" placeholder="ФИО" required="">
+            </div>
+            <div class="request__input request__input--contacts">
+              <input name="user-tel" id="request-user-tel" type="text" placeholder="Телефон" required="">
+              <input name="user-email" id="request-user-email" type="text" placeholder="E-mail" required="">
+            </div>
+            <button class="request__submit button" type="submit">
+              <span class="request__submit-main">Отправить</span>
+              <span class="request__submit-mobile">Оформить заявку</span>
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="map container">
+        <h2>Отделения Лига Банка</h2>
+        <ul class="map__filters">
+          <li class="map__filters-item">
+            <input class="visually-hidden" id="check-first" name="check-first" type="checkbox">
+            <label for="check-first">Россия</label>
           </li>
-          <li class="services__item service swiper-slide">
-            <div class="service__content">
-              <b>Лига Страхование — застрахуем все&nbsp;что&nbsp;захотите</b>
-              <ul class="service__inner-list">
-                <li class="service__inner-item">
-                  Автомобильное страхование
-                </li>
-                <li class="service__inner-item">
-                  Страхование жизни и здоровья
-                </li>
-                <li class="service__inner-item">
-                  Страхование недвижимости
-                </li>
-              </ul>
-              <a class="service__link button" href="#">Узнать подробнее</a>
-            </div>
-            <div class="service__img">
-              <picture>
-                <source type="image/webp" media="(max-width: 768px)" srcset="img/content/lock-mobile@1x.webp 1x, img/content/lock-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/lock-tablet@1x.webp 1x, img/content/lock-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/content/lock-desktop@1x.webp 1x, img/content/lock-desktop@2x.webp 2x">
-                <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
-                <source media="(max-width: 768px)" srcset="img/content/lock-mobile@1x.png 1x, img/content/lock-mobile@2x.png 2x">
-                <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
-                <source media="(max-width: 1023px)" srcset="img/content/lock-tablet@1x.png 1x, img/content/lock-tablet@2x.png 2x">
-                <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
-                <img src="img/content/lock-desktop@1x.png" srcset="img/content/lock-desktop@2x.png 2x" width="440" height="290" alt="Картинка замка">
-              </picture>
-            </div>
+          <li class="map__filters-item">
+            <input class="visually-hidden" id="check-second" name="check-second" type="checkbox">
+            <label for="check-second">СНГ</label>
           </li>
-          <li class="services__item service swiper-slide">
-            <div class="service__content">
-              <b>Лига Банк — это огромное количество онлайн-сервисов для&nbsp;вашего&nbsp;удобства</b>
-              <ul class="service__inner-list">
-                <li class="service__inner-item">
-                  Мобильный банк,
-                  <br>
-                  который всегда под рукой
-                </li>
-                <li class="service__inner-item">
-                  Приложение Лига-проездной позволит вам&nbsp;оплачивать билеты&nbsp;по&nbsp;всему&nbsp;миру
-                </li>
-              </ul>
-              <a class="service__link button" href="#">Узнать подробнее</a>
-            </div>
-            <div class="service__img">
-              <picture>
-                <source type="image/webp" media="(max-width: 768px)" srcset="img/content/phone-mobile@1x.webp 1x, img/content/phone-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/phone-tablet@1x.webp 1x, img/content/phone-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/content/phone-desktop@1x.webp 1x, img/content/phone-desktop@2x.webp 2x">
-                <!-- 1X: 87px x 113px; 2X: 174px x 226px-->
-                <source media="(max-width: 768px)" srcset="img/content/phone-mobile@1x.png 1x, img/content/phone-mobile@2x.png 2x">
-                <!-- 1X: 289px x 260px; 2X: 578px x 520px-->
-                <source media="(max-width: 1023px)" srcset="img/content/phone-tablet@1x.png 1x, img/content/phone-tablet@2x.png 2x">
-                <!-- 1X: 440px x 290px; 2X: 880px x 580px-->
-                <img src="img/content/phone-desktop@1x.png" srcset="img/content/phone-desktop@2x.png 2x" width="440" height="290" alt="Картинка мобильного телефона">
-              </picture>
-            </div>
+          <li class="map__filters-item">
+            <input class="visually-hidden" id="check-third" name="check-third" type="checkbox">
+            <label for="check-third">Европа</label>
           </li>
         </ul>
-        <div class="swiper-pagination-services"></div>
+        <div class="map__block" id="map">
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content container">
+        <nav class="footer__nav">
+          <div class="footer__logo">
+            <a aria-label="Логотип кампании">
+              <img src="img/content/logo.svg" width="150" height="27" alt="Логотип Лига Банк">
+            </a>
+            <p>
+              150015, г. Москва, ул. Московская, д. 32 Генеральная лицензия Банка России №1050 Ⓒ Лига Банк, 2019
+            </p>
+          </div>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#services">Услуги</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#calculator">Рассчитать кредит</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Контакты</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Задать вопрос</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <div class="footer__call-mobile">
+            <a href="tel:*0904">
+              <svg width="10" height="16">
+                <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              <span>*0904</span>
+            </a>
+            <p>Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
+          </div>
+          <div class="footer__call-tel">
+            <a href="tel:88001112233">
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite_auto.svg#icon-tel"></use>
+              </svg>
+              <span>8 800 111 22 33</span>
+            </a>
+            <p>Бесплатный для всех городов России</p>
+          </div>
+          <ul class="footer__social">
+            <li>
+              <a href="#" aria-label="ЛигаБанк в Фейсбуке">
+                <svg width="26" height="15">
+                  <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="ЛигаБанк в Инстаграмме">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite_auto.svg#icon-inst"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="ЛигаБанк в Твиттере">
+                <svg width="16" height="13">
+                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="ЛигаБанк в Youtube">
+                <svg width="16" height="13">
+                  <use xlink:href="img/sprite_auto.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
+    </footer>
+  </div>
   <div class="popup-login">
     <div class="popup-login__overlay">
       <div class="popup-login__form form">
@@ -261,10 +563,24 @@
           <a class="form__forgot-password" href="#">Забыли пороль?</a>
           <button class="form__submit popup-login__submit button" type="submit">Войти</button>
         </form>
-        <button class="form__closer popup-login__close" type="button" aria-label="Закрыть окно"></button>
+        <button class="form__closer popup-login__close button button--closer" type="button" aria-label="Закрыть окно"></button>
       </div>
     </div>
   </div>
+  <!-- Сообщение об успешном создании заявки -->
+  <div class="success">
+    <div class="success__overlay">
+      <div class="success__message">
+        <b>Спасибо за обращение в&nbsp;наш&nbsp;банк.</b>
+        <p>Наш менеджер скоро свяжется с вами по&nbsp;указанному&nbsp;номеру телефона.</p>
+        <button class="success__closer button button--closer" type="button" aria-label="Закрыть окно"></button>
+      </div>
+    </div>
+  </div>
+  <!-- Метка отделения ЛигаБанка -->
+  <template id="placemark">
+    <div class="map-placemark"></div>
+  </template>
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
 </body>
