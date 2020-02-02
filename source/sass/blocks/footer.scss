@@ -122,6 +122,11 @@
   }
 }
 
+.footer__nav-item {
+  display: flex;
+  align-items: flex-start;
+}
+
 .footer__nav-link {
   display: block;
   margin-bottom: 9px;
@@ -137,121 +142,81 @@
   }
 }
 
-.footer__call-mobile {
-  width: 47%;
+.footer__call {
+  position: relative;
+  width: 41%;
   box-sizing: border-box;
-  padding: 11px 0;
+  padding: 11px 0 0 0;
 
   @media ($tablet) {
     width: 100%;
+    margin-bottom: 11px;
     padding: 11px 0 0 0;
   }
 
   @media ($mobile) {
+    margin-bottom: 3px;
     padding: 15px 0 0 0;
   }
 
-  a {
-    position: relative;
+  span {
     padding-left: 60px;
 
     @media ($tablet) {
-      padding: 0 0 0 78px;
+      padding-left: 78px;
     }
 
     @media ($mobile) {
-      padding: 0 0 0 29px;
+      padding-left: 29px;
     }
   }
 
   p {
-    width: 72%;
+    width: 86%;
     margin: 0;
-    padding: 0 0 0 60px;
+    padding-left: 60px;
 
     @media ($tablet) {
       width: 66%;
-      padding: 0 0 0 78px;
+      padding-left: 78px;
     }
 
     @media ($mobile) {
       width: 70%;
-      padding: 0 0 0 29px;
+      padding-left: 29px;
     }
   }
 
-  svg {
+  &::before {
+    content: "";
     position: absolute;
-    top: 2px;
+    width: 16px;
+    height: 16px;
+    top: 13px;
     left: 30px;
+    background-repeat: no-repeat;
 
     @media ($tablet) {
-      top: -2px;
       left: 49px;
     }
 
     @media ($mobile) {
-      top: 0;
+      top: 16px;
       left: 0;
     }
   }
-}
 
-.footer__call-tel {
-  width: 36%;
-  padding: 10px 0;
-
-  @media ($tablet) {
-    width: 100%;
-    padding: 22px 0 0 0;
+  &--mob::before {
+    background-image: url("../img/bg/icon-phone.svg");
   }
 
-  @media ($mobile) {
-    padding: 18px 0 0 0;
-  }
-
-  a {
-    position: relative;
-    padding-left: 36px;
-
+  &--tel {
     @media ($tablet) {
-      padding: 0 0 0 82px;
+      margin-bottom: 0;
     }
 
-    @media ($mobile) {
-      padding: 0 0 0 33px;
-    }
-  }
-
-  p {
-    width: 75%;
-    margin: 0;
-    padding-left: 36px;
-
-    @media ($tablet) {
-      width: 60%;
-      padding: 0 0 0 82px;
-    }
-
-    @media ($mobile) {
-      width: 70%;
-      padding: 0 0 0 33px;
-    }
-  }
-
-  svg {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-
-    @media ($tablet) {
-      top: -2px;
-      left: 49px;
-    }
-
-    @media ($mobile) {
-      top: 0;
-      left: 0;
+    &::before {
+      background-image: url("../img/bg/icon-tel.svg");
     }
   }
 }
