@@ -28,14 +28,33 @@ const creditOffer = document.querySelector(`.offer`);
 const creditGoal = document.querySelector(`[name = credit-goal]`);
 const requestCreditLink = document.querySelector(`.offer__link`);
 
-const openCreditTypeMenuHandler = () => {
-  if (creditTypeMenu.classList.contains(`goal__list--active`)) {
-    creditTypeMenu.classList.remove(`goal__list--active`);
-    iconOpenMenu.style.transform = `none`;
-  } else {
-    creditTypeMenu.classList.add(`goal__list--active`);
-    iconOpenMenu.style.transform = `rotate(-540deg)`;
+const closeRequestOnClickOutside = (e) => {
+  let target = e.target;
+  console.log(target);
+
+  if (target.classList.contains(`credit`) || target.classList.contains(`map`)) {
+    closeCreditTypeMenuHandler();
   }
+};
+
+const closeOnClickOutsideHandler = (e) => {
+  let target = e.target;
+
+  if (target.classList.contains(`popup-login__overlay`)) {
+    popupCloserHandler();
+  }
+};
+
+const closeCreditTypeMenuHandler = () => {
+  creditTypeMenu.classList.remove(`goal__list--active`);
+  iconOpenMenu.style.transform = `none`;
+};
+
+const openCreditTypeMenuHandler = () => {
+  creditTypeMenu.classList.add(`goal__list--active`);
+  iconOpenMenu.style.transform = `rotate(-540deg)`;
+
+  document.addEventListener(`click`, closeRequestOnClickOutside);
 };
 
 const hideAllCreditTypeBlock = () => {
@@ -48,6 +67,7 @@ const openCreditTypeBlockHandler = () => {
   linksCreditType.forEach((linkCreditType) => {
     linkCreditType.addEventListener(`click`, (evt) => {
       evt.preventDefault();
+      closeCreditTypeMenuHandler();
       hideAllCreditTypeBlock();
 
       creditGoal.value = linkCreditType.innerHTML;
@@ -78,7 +98,6 @@ const openCreditTypeBlockHandler = () => {
           break;
       }
 
-      openCreditTypeMenuHandler();
       creditOffer.classList.add(`offer--active`);
     });
   });
