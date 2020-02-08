@@ -3,13 +3,15 @@ const creditOffer = {
     creditName: `Сумма ипотеки`,
     creditGoal: `Ипотека`,
     creditCostObject: `Стоимость недвижимости`,
-    creditNameError: `ипотечные`
+    creditNameError: `ипотечные кредиты`,
+    creditValueError: `500 000 рублей.`
   },
   'carLoan': {
-    creditName: `Сумму автокредита`,
+    creditName: `Сумма автокредита`,
     creditGoal: `Автокредит`,
     creditCostObject: `Стоимость автомобиля`,
-    creditNameError: `автокредиты`
+    creditNameError: `автокредиты`,
+    creditValueError: `200 000 рублей.`
   },
   'consumer': {
     creditName: `Сумма кредита`,

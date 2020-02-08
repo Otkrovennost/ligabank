@@ -1,7 +1,7 @@
 const tabs = document.querySelectorAll(`.services__tab-link`);
 const servicesContent = document.querySelector(`.services__list`);
 
-let tabElementClick = () => {
+const tabElementClick = () => {
 
   let hideAllTabs = () => {
     tabs.forEach((tab) => {

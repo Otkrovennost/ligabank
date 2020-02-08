@@ -28,10 +28,6 @@
     padding: 60px 20px;
     background-color: $color-bg-base;
 
-    @media ($desktop-plus) {
-      padding: 60px;
-    }
-
     @media ($tablet) {
       padding: 54px 60px;
     }

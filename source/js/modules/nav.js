@@ -1,7 +1,7 @@
 const navMain = document.querySelector(`.nav`);
 const navToggler = document.querySelector(`.nav__toggler`);
 
-let openMenu = () => {
+const openMenu = () => {
   if (navMain.classList.contains(`nav--closed`)) {
     navMain.classList.remove(`nav--closed`);
     navMain.classList.add(`nav--opened`);
@@ -12,7 +12,7 @@ let openMenu = () => {
   }
 };
 
-let scrollToContent = () => {
+const scrollToContent = () => {
   const anchors = document.querySelectorAll(`a[href*="#"]`);
 
   for (let anchor of anchors) {

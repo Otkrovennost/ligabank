@@ -1,3 +1,5 @@
+import IMask from 'imask';
+
 import {
   sliderAnimation, addSwiperServices
 } from "./swiper.js";
@@ -11,4 +13,12 @@ if (sliderBlock) {
 
 if (sliderTabsBlock) {
   addSwiperServices();
+}
+
+const inputForTel = document.querySelector(`.request__input--contacts input[name=user-tel]`);
+
+if (inputForTel) {
+  const validatePhone = new IMask(inputForTel, {
+    mask: `+{7}(000)000-00-00`
+  });
 }

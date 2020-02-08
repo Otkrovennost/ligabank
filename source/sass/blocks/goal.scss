@@ -23,6 +23,7 @@
     color: $color-default;
     border: 1px solid $color-default;
     border-radius: 4px;
+    cursor: pointer;
 
     @media ($mobile) {
       padding: 18px 50px 18px 14px;

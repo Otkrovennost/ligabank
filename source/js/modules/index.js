@@ -8,27 +8,21 @@ import {
   tabs, tabElementClick
 } from "./tab.js";
 import {
-  iconOpenMenu, openCreditTypeMenuHandler, linksCreditType, openCreditTypeBlockHandler,
+  iconOpenMenu, openCreditTypeMenuHandler, linksCreditType, openCreditTypeBlockHandler, creditGoal
 } from "./calculator-main.js";
-import {
-  mortgageCredit, creditMortgageCalculator
-} from "./credit-mortgage.js";
 import {
   inputValueChange, prettifyRubbles, prettifyYears
 } from "./inputs-entry.js";
 import {
-  openRequestForm, requestForm, submitRequestForm
+  requestForm, submitRequestForm, changeFormInputsValue
 } from "./request.js";
-
 const openLoginLink = document.querySelector(`.nav__user-link`);
 const navItemLinks = document.querySelectorAll(`.nav__link`);
 const loginFormBlock = document.querySelector(`.popup-login`);
 const submitForm = loginFormBlock.querySelector(`form`);
 const creditCalculatorBlock = document.querySelector(`.credit`);
-const requestLink = document.querySelector(`.offer__link`);
 const creditBlockInputsForRubbles = document.querySelectorAll(`.credit__item input[data-input-value=rubbles]`);
 const creditBlockInputsForYears = document.querySelectorAll(`.credit__item input[data-input-value=years]`);
-// const requestSubmit = document.querySelector(`.request__submit`);
 
 navMain.classList.add(`nav--closed`);
 
@@ -59,14 +53,11 @@ if (tabs) {
 
 if (creditCalculatorBlock) {
   iconOpenMenu.addEventListener(`click`, openCreditTypeMenuHandler);
+  creditGoal.addEventListener(`click`, openCreditTypeMenuHandler);
 }
 
 if (linksCreditType) {
   openCreditTypeBlockHandler();
-}
-
-if (requestLink) {
-  requestLink.addEventListener(`click`, openRequestForm);
 }
 
 if (creditBlockInputsForRubbles) {
@@ -77,10 +68,7 @@ if (creditBlockInputsForYears) {
   inputValueChange(creditBlockInputsForYears, 5, prettifyYears);
 }
 
-if (mortgageCredit) {
-  creditMortgageCalculator();
-}
-
 if (requestForm) {
+  changeFormInputsValue();
   requestForm.addEventListener(`submit`, submitRequestForm);
 }

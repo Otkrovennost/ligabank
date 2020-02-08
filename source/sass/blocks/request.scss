@@ -15,6 +15,12 @@
   &--show {
     display: block;
   }
+
+  &--error {
+    form {
+      animation: shake 0.6s;
+    }
+  }
 }
 
 .request__item {

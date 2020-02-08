@@ -13,12 +13,12 @@ let storageName = localStorage.getItem(`login`);
 let storagePassword = localStorage.getItem(`password`);
 
 
-let popupCloserHandler = () => {
+const popupCloserHandler = () => {
   popupElement.classList.remove(`popup-login--show`);
   enableScrolling();
 };
 
-let saveInLocalStorageHandler = () => {
+const saveInLocalStorageHandler = () => {
   if (userName.value || userPassword.value) {
     localStorage.setItem(`login`, userName.value);
     localStorage.setItem(`password`, userPassword.value);
@@ -26,7 +26,7 @@ let saveInLocalStorageHandler = () => {
   }
 };
 
-let getInLocalStorage = () => {
+const getInLocalStorage = () => {
   if (storageName || storagePassword) {
     userName.value = storageName;
     userPassword.value = storagePassword;
@@ -34,7 +34,7 @@ let getInLocalStorage = () => {
   }
 };
 
-let closeByEsc = () => {
+const closeByEsc = () => {
   document.addEventListener(`keydown`, (evt) => {
     if (evt.keyCode === ESC_KEYCODE) {
       popupCloserHandler();
@@ -42,7 +42,7 @@ let closeByEsc = () => {
   });
 };
 
-let CloseOnClickOutsideHandler = (e) => {
+const closeOnClickOutsideHandler = (e) => {
   let target = e.target;
 
   if (target.classList.contains(`popup-login__overlay`)) {
@@ -50,7 +50,7 @@ let CloseOnClickOutsideHandler = (e) => {
   }
 };
 
-let showPasswordHandler = (evt) => {
+const showPasswordHandler = (evt) => {
   evt.preventDefault();
   userPassword.setAttribute(`type`, `text`);
 
@@ -64,7 +64,7 @@ let showPasswordHandler = (evt) => {
   document.addEventListener(`mouseup`, onMouseUp);
 };
 
-let popupOpenHandler = () => {
+const popupOpenHandler = () => {
   if (popupElement) {
     popupElement.classList.add(`popup-login--show`);
     userName.focus();
@@ -74,7 +74,7 @@ let popupOpenHandler = () => {
 
   popupClose.addEventListener(`click`, popupCloserHandler);
   closeByEsc();
-  document.addEventListener(`click`, CloseOnClickOutsideHandler);
+  document.addEventListener(`click`, closeOnClickOutsideHandler);
 };
 
 export {
