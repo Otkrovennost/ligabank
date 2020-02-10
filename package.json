@@ -60,6 +60,7 @@
   "dependencies": {
     "imask": "^5.2.1",
     "inputmask": "^5.0.3",
-    "swiper": "^5.2.1"
+    "swiper": "^5.2.1",
+    "ymaps": "^0.2.1"
   }
 }

@@ -34,8 +34,9 @@
 .goal__icon {
   position: absolute;
   top: 76px;
-  right: 20px;
+  right: 14%;
   cursor: pointer;
+  transition: 0.6s;
 
   @media ($tablet) {
     top: 68px;
@@ -45,6 +46,10 @@
   @media ($mobile) {
     top: 62px;
     right: 14px;
+  }
+
+  &--active {
+    transform: rotate(-180deg);
   }
 
   &:hover,
@@ -57,7 +62,7 @@
   position: absolute;
   top: 109px;
   display: none;
-  width: 100%;
+  width: 90%;
   margin: 0;
   padding: 0;
   line-height: 22px;
@@ -69,6 +74,7 @@
 
   @media ($tablet) {
     top: 103px;
+    width: 100%;
   }
 
   @media ($mobile) {

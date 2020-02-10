@@ -25,11 +25,11 @@
   form {
     display: flex;
     flex-wrap: wrap;
-    padding: 60px 20px;
+    padding: 60px 40px;
     background-color: $color-bg-base;
 
     @media ($tablet) {
-      padding: 54px 60px;
+      padding: 54px 60px 61px 60px;
     }
 
     @media ($mobile) {
@@ -44,6 +44,7 @@
     line-height: 31px;
     background-color: transparent;
     border: none;
+    outline: none;
 
     @media ($mobile) {
       font-size: 18px;

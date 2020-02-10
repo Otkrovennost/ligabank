@@ -28,46 +28,36 @@ const creditOffer = document.querySelector(`.offer`);
 const creditGoal = document.querySelector(`[name = credit-goal]`);
 const requestCreditLink = document.querySelector(`.offer__link`);
 
-const closeRequestOnClickOutside = (e) => {
-  let target = e.target;
-  console.log(target);
-
-  if (target.classList.contains(`credit`) || target.classList.contains(`map`)) {
-    closeCreditTypeMenuHandler();
-  }
-};
-
-const closeOnClickOutsideHandler = (e) => {
-  let target = e.target;
-
-  if (target.classList.contains(`popup-login__overlay`)) {
-    popupCloserHandler();
-  }
-};
-
-const closeCreditTypeMenuHandler = () => {
-  creditTypeMenu.classList.remove(`goal__list--active`);
-  iconOpenMenu.style.transform = `none`;
-};
-
-const openCreditTypeMenuHandler = () => {
-  creditTypeMenu.classList.add(`goal__list--active`);
-  iconOpenMenu.style.transform = `rotate(-540deg)`;
-
-  document.addEventListener(`click`, closeRequestOnClickOutside);
-};
-
 const hideAllCreditTypeBlock = () => {
   creditBlocks.forEach((creditBlock) => {
     creditBlock.classList.remove(`credit__block--active`);
   });
 };
 
+const hideCalculatorBlock = () => {
+  creditOffer.classList.remove(`offer--active`);
+  hideAllCreditTypeBlock();
+  creditGoal.value = `Выберите цель кредита`;
+};
+
+const closeMenuOnOutsideClick = (el) => {
+  let target = el.target;
+  console.log(target);
+};
+
+const closeCreditMenu = () => {
+  if (creditTypeMenu.classList.contains(`goal__list--active`)) {
+    creditTypeMenu.classList.remove(`goal__list--active`);
+    iconOpenMenu.classList.remove(`goal__icon--active`);
+  }
+  creditGoal.removeEventListener(`click`, closeCreditMenu);
+};
+
 const openCreditTypeBlockHandler = () => {
   linksCreditType.forEach((linkCreditType) => {
     linkCreditType.addEventListener(`click`, (evt) => {
       evt.preventDefault();
-      closeCreditTypeMenuHandler();
+      closeCreditMenu();
       hideAllCreditTypeBlock();
 
       creditGoal.value = linkCreditType.innerHTML;
@@ -103,12 +93,14 @@ const openCreditTypeBlockHandler = () => {
   });
 };
 
-const hideCalculatorBlock = () => {
-  creditOffer.classList.remove(`offer--active`);
-  hideAllCreditTypeBlock();
-  creditGoal.value = `Выберите цель кредита`;
+const openCreditMenu = () => {
+  creditTypeMenu.classList.add(`goal__list--active`);
+  iconOpenMenu.classList.add(`goal__icon--active`);
+  openCreditTypeBlockHandler();
+  creditGoal.addEventListener(`click`, closeCreditMenu);
+  document.addEventListener(`click`, closeMenuOnOutsideClick);
 };
 
 export {
-  iconOpenMenu, openCreditTypeMenuHandler, linksCreditType, openCreditTypeBlockHandler, hideCalculatorBlock, creditGoal
+  openCreditMenu, linksCreditType, openCreditTypeBlockHandler, hideCalculatorBlock, creditGoal
 };

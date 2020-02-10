@@ -23,7 +23,6 @@
   left: 4%;
   border: 0;
   background-color: transparent;
-  outline: 0;
   cursor: pointer;
 
   @media ($mobile) {
@@ -48,7 +47,7 @@
 
   &--max {
     top: -37px;
-    left: 94%;
+    left: 93%;
 
     @media ($mobile) {
       top: -39px;
@@ -65,7 +64,6 @@
 
   &:focus,
   &:hover {
-    outline: 0;
     opacity: 0.6;
     transition: 0.9s;
   }
@@ -112,19 +110,13 @@
   position: relative;
   -webkit-appearance: none;
   width: 100%;
-  padding: 5px 0 0 0;
+  height: 14px;
+  margin-top: 10px;
+  padding: 0;
   border: transparent;
   background-color: transparent;
   outline: none;
   z-index: 1;
-
-  @media ($tablet) {
-    padding: 10px 0 0 0;
-  }
-
-  @media ($mobile) {
-    padding: 8px 0 0;
-  }
 }
 
 .range input[type="range"]::-webkit-slider-thumb {

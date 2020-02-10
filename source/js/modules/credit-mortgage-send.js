@@ -88,9 +88,9 @@ const calculatePercentRate = () => {
   let currentPercent = parseInt(rangeContributionPercent.value, 10);
 
   if (currentPercent >= 15) {
-    inputCreditPercent.value = `8.50%`;
+    inputCreditPercent.value = `8,50%`;
   } else if (currentPercent < 15) {
-    inputCreditPercent.value = `9.40%`;
+    inputCreditPercent.value = `9,40%`;
   }
 };
 

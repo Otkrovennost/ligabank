@@ -118,6 +118,7 @@ const validateTell = () => {
 };
 
 const setErrorBorderForName = () => {
+  requestForm.classList.remove(`request--error`);
   if (!validateUserName()) {
     userFullName.style.border = ERROR_BORDER;
   } else {
@@ -126,6 +127,7 @@ const setErrorBorderForName = () => {
 };
 
 const setErrorBorderForEmail = () => {
+  requestForm.classList.remove(`request--error`);
   if (!validateUserEmail()) {
     userEmail.style.border = ERROR_BORDER;
   } else {
@@ -134,6 +136,7 @@ const setErrorBorderForEmail = () => {
 };
 
 const setErrorBorderForTell = () => {
+  requestForm.classList.remove(`request--error`);
   if (!validateTell()) {
     userTell.style.border = ERROR_BORDER;
   } else {
@@ -149,8 +152,8 @@ const setBaseStyleForInputsBorder = () => {
 
 const changeFormInputsValue = () => {
   setBaseStyleForInputsBorder();
-  userFullName.addEventListener(`input`, setErrorBorderForName);
-  userEmail.addEventListener(`input`, setErrorBorderForEmail);
+  userFullName.addEventListener(`change`, setErrorBorderForName);
+  userEmail.addEventListener(`change`, setErrorBorderForEmail);
   userTell.addEventListener(`change`, setErrorBorderForTell);
 };
 
@@ -175,15 +178,13 @@ const successMessageOpenHandler = () => {
 
 const submitRequestForm = (evt) => {
   evt.preventDefault();
-  if (!userFullName.value && !userEmail.value && !userTell.value) {
-    requestForm.classList.add(`request--error`);
+  if (validateUserName() && validateUserEmail() && validateTell()) {
+    requestForm.classList.remove(`request--error`);
+    increaseRequestNumber();
+    saveInLocalStorageRequest();
+    successMessageOpenHandler();
   } else {
-    if (validateUserName() && validateUserEmail() && validateTell()) {
-      requestForm.classList.remove(`request--error`);
-      increaseRequestNumber();
-      saveInLocalStorageRequest();
-      successMessageOpenHandler();
-    }
+    requestForm.classList.add(`request--error`);
   }
 };
 

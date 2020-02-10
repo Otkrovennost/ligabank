@@ -8,7 +8,7 @@ import {
   tabs, tabElementClick
 } from "./tab.js";
 import {
-  iconOpenMenu, openCreditTypeMenuHandler, linksCreditType, openCreditTypeBlockHandler, creditGoal
+  openCreditMenu, creditGoal
 } from "./calculator-main.js";
 import {
   inputValueChange, prettifyRubbles, prettifyYears
@@ -52,12 +52,7 @@ if (tabs) {
 }
 
 if (creditCalculatorBlock) {
-  iconOpenMenu.addEventListener(`click`, openCreditTypeMenuHandler);
-  creditGoal.addEventListener(`click`, openCreditTypeMenuHandler);
-}
-
-if (linksCreditType) {
-  openCreditTypeBlockHandler();
+  creditGoal.addEventListener(`click`, openCreditMenu);
 }
 
 if (creditBlockInputsForRubbles) {

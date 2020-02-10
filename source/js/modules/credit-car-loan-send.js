@@ -54,24 +54,30 @@ const calculatePercentRateForCarLoan = () => {
   let inputCurrentValue = parseInt(clearString(inputCarLoanCost.value), 10);
 
   if (checkInsuranceCar.checked && checkInsuranceLife.checked) {
-    inputCreditPercent.value = `3.5%`;
+    inputCreditPercent.value = `3,50%`;
   } else if (checkInsuranceCar.checked || checkInsuranceLife.checked) {
-    inputCreditPercent.value = `8.5%`;
+    inputCreditPercent.value = `8,50%`;
   } else if (inputCurrentValue >= 2000000) {
-    inputCreditPercent.value = `15%`;
+    inputCreditPercent.value = `15,00%`;
   } else {
-    inputCreditPercent.value = `16%`;
+    inputCreditPercent.value = `16,00%`;
   }
   calculateMonthlyPaymentForCarLoan();
 };
 
 const calculateMonthlyPaymentForCarLoan = () => {
   let creditTerm = parseInt(clearString(inputCarLoanTermValue.value), 10);
-  let currentPercentValue = parseFloat(inputCreditPercent.value.replace(/%/g, ``));
   let creditSumValue = parseInt(clearString(inputCreditSum.value), 10);
   let creditPeriod = creditTerm * 12;
   let monthlyPercentValue;
   let monthlyPayment;
+  let currentPercentValue;
+
+  if (inputCreditPercent.length === 5) {
+    currentPercentValue = parseFloat(inputCreditPercent.value.replace(`,`, `.`).slice(0, 4));
+  } else {
+    currentPercentValue = parseFloat(inputCreditPercent.value.replace(`,`, `.`).slice(0, 5));
+  }
 
   monthlyPercentValue = currentPercentValue / 100 / 12;
   monthlyPayment = creditSumValue * (monthlyPercentValue + (monthlyPercentValue / (Math.pow((1 + monthlyPercentValue), creditPeriod) - 1)));

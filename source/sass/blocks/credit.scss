@@ -52,7 +52,7 @@
 }
 
 .credit__inner {
-  width: 51%;
+  width: calc(100% - 500px);
 
   @media ($tablet) {
     width: 100%;
@@ -61,10 +61,20 @@
 
 .credit__goal {
   width: 100%;
+  padding-right: 10%;
+
+  @media ($tablet) {
+    padding: 0;
+  }
 }
 
 .credit__calculator {
   width: 100%;
+  padding-right: 10%;
+
+  @media ($tablet) {
+    padding: 0;
+  }
 }
 
 .credit__block {
@@ -164,12 +174,12 @@
 }
 
 .credit__offer {
-  width: 43%;
+  width: 500px;
   margin-left: auto;
 
   @media ($tablet) {
     width: 100%;
-    padding-top: 28px;
+    padding-top: 32px;
   }
 
   @media ($mobile) {
@@ -186,8 +196,7 @@
 
   @media ($tablet) {
     margin-top: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 56px 0 70px 0;
     background-color: transparent;
   }
 

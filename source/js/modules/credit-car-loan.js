@@ -31,27 +31,33 @@ const inputCreditSum = offerForm.querySelector(`.offer__item input[name=credit-n
 const scaleBiggerCarLoanHandler = () => {
   closeRequestForm();
   setSlyleDefaulForCarLoan();
+  setMinPercentValueForCarLoan();
   let scaleControlNumber = parseInt(clearString(inputCarLoanCost.value), 10);
 
-  if (scaleControlNumber <= (scaleValueCostMax - scaleValueCostStep)) {
+  if (scaleControlNumber < scaleValueCostMin) {
+    inputCarLoanCost.value = prettifyRubbles(scaleValueCostMin);
+  } else if (scaleControlNumber <= (scaleValueCostMax - scaleValueCostStep)) {
     scaleControlNumber += scaleValueCostStep;
     inputCarLoanCost.value = prettifyRubbles(scaleControlNumber);
-    setPercentValueForCarLoan();
   }
+  setPercentValueForCarLoan();
 };
 
 const scaleSmallerCarLoanHandler = () => {
   closeRequestForm();
   setSlyleDefaulForCarLoan();
+  setMinPercentValueForCarLoan();
   let scaleControlNumber = parseInt(clearString(inputCarLoanCost.value), 10);
 
-  if (scaleControlNumber >= (scaleValueCostMin + scaleValueCostStep)) {
+  if (scaleControlNumber > scaleValueCostMax) {
+    inputCarLoanCost.value = prettifyRubbles(scaleValueCostMax);
+  } else if (scaleControlNumber >= (scaleValueCostMin + scaleValueCostStep)) {
     scaleControlNumber -= scaleValueCostStep;
     inputCarLoanCost.value = prettifyRubbles(scaleControlNumber);
-    setPercentValueForCarLoan();
-    getCreditCarLoanSum();
-    calculateMonthlyPaymentForCarLoan();
   }
+  setPercentValueForCarLoan();
+  getCreditCarLoanSum();
+  calculateMonthlyPaymentForCarLoan();
 };
 
 const setMinContributionCarLoan = () => {
@@ -149,6 +155,11 @@ const minAndMaxTermCarLoanHandler = () => {
   calculateMonthlyPaymentForCarLoan();
 };
 
+const inputSumCarLoanChange = () => {
+  setMinPercentValueForCarLoan();
+  setPercentValueForCarLoan();
+};
+
 const creditCarLoanCalculator = () => {
   closeRequestForm();
   setSlyleDefaulForCarLoan();
@@ -158,13 +169,13 @@ const creditCarLoanCalculator = () => {
   calculatePercentRateForCarLoan();
   calculateMonthlyPaymentForCarLoan();
   setMinCreditTermForCarLoan();
-  inputCarLoanCost.addEventListener(`input`, setPercentValueForCarLoan);
+  inputCarLoanCost.addEventListener(`input`, inputSumCarLoanChange);
   buttonBiggerCarLoan.addEventListener(`click`, scaleBiggerCarLoanHandler);
   buttonSmallerCarLoan.addEventListener(`click`, scaleSmallerCarLoanHandler);
-  rangeCarLoanContributionPercent.addEventListener(`change`, setPercentValueForCarLoan);
+  rangeCarLoanContributionPercent.addEventListener(`input`, setPercentValueForCarLoan);
   inputCarLoanContribution.addEventListener(`input`, changeInputContributionForCarLoan);
   inputCarLoanContribution.addEventListener(`change`, minAndMaxUserContibutionForCarLoanHandler);
-  rangeCarLoanTerm.addEventListener(`change`, changeCreditTermForCarLoan);
+  rangeCarLoanTerm.addEventListener(`input`, changeCreditTermForCarLoan);
   inputCarLoanTermValue.addEventListener(`input`, changeinputCarLoanTermValueForCarLoan);
   inputCarLoanTermValue.addEventListener(`change`, minAndMaxTermCarLoanHandler);
   checkInsuranceCar.addEventListener(`click`, calculatePercentRateForCarLoan);

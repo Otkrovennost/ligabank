@@ -16,12 +16,13 @@ import {
 const consumerCredit = document.querySelector(`.consumer`);
 const checkerSalaryProject = consumerCredit.querySelector(`.consumer__checker input[name=salary]`);
 let percentDecline;
+let percentForCredit;
 
 const getCreditConsumerSum = () => {
   let inputCurrentValue = parseInt(clearString(inputConsumerCreditCost.value), 10);
   inputCreditSumLabel.innerHTML = creditOffer.consumer.creditName;
   inputCreditSum.value = prettifyRubbles(inputCurrentValue);
-  calculatePercentRateForConsumer();
+  setPercentValue();
 };
 
 const isSalaryCheckerChecked = () => {
@@ -35,7 +36,6 @@ const isSalaryCheckerChecked = () => {
 
 const calculatePercentRateForConsumer = () => {
   let inputCurrentValue = parseInt(clearString(inputConsumerCreditCost.value), 10);
-  let percentForCredit;
   isSalaryCheckerChecked();
 
   if (inputCurrentValue >= 750000 && inputCurrentValue < 2000000) {
@@ -45,19 +45,35 @@ const calculatePercentRateForConsumer = () => {
   } else {
     percentForCredit = 15 - percentDecline;
   }
+  return percentForCredit;
+}
+const setPercentValue = () => {
+  let currentPercent;
+  calculatePercentRateForConsumer();
+  currentPercent = String(percentForCredit);
 
-  inputCreditPercent.value = percentForCredit + `%`;
+  if (currentPercent.length === 4 || currentPercent.length === 3) {
+    currentPercent = currentPercent + `0%`;
+  } else {
+    currentPercent = currentPercent + `.00%`;
+  }
+  inputCreditPercent.value = currentPercent.replace(`.`, `,`);
   calculateMonthlyPaymentForConsumer();
 };
 
 const calculateMonthlyPaymentForConsumer = () => {
   let creditTerm = parseInt(clearString(inputConsumerTermValue.value), 10);
-  let currentPercentValue = parseFloat(inputCreditPercent.value.replace(/%/g, ``));
+  let currentPercentValue;
   let creditSumValue = parseInt(clearString(inputCreditSum.value), 10);
   let creditPeriod = creditTerm * 12;
   let monthlyPercentValue;
   let monthlyPayment;
 
+  if (inputCreditPercent.length === 5) {
+    currentPercentValue = parseFloat(inputCreditPercent.value.replace(`,`, `.`).slice(0, 4));
+  } else {
+    currentPercentValue = parseFloat(inputCreditPercent.value.replace(`,`, `.`).slice(0, 5));
+  }
   monthlyPercentValue = currentPercentValue / 100 / 12;
   monthlyPayment = creditSumValue * (monthlyPercentValue + (monthlyPercentValue / (Math.pow((1 + monthlyPercentValue), creditPeriod) - 1)));
   inputCreditMonthlyPayment.value = prettifyRubbles(monthlyPayment.toFixed());
@@ -95,5 +111,5 @@ const setSlyleDefaulForConsumer = () => {
 };
 
 export {
-  getCreditConsumerSum, calculatePercentRateForConsumer, checkerSalaryProject, setSlyleDefaulForConsumer, issueRequestConsumerHandler
+  getCreditConsumerSum, setPercentValue, checkerSalaryProject, setSlyleDefaulForConsumer, issueRequestConsumerHandler
 };

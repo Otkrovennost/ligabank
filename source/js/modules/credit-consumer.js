@@ -5,7 +5,7 @@ import {
   closeRequestForm
 } from "./request.js";
 import {
-  getCreditConsumerSum, calculatePercentRateForConsumer, checkerSalaryProject, setSlyleDefaulForConsumer
+  getCreditConsumerSum, setPercentValue, checkerSalaryProject, setSlyleDefaulForConsumer
 } from "./credit-consumer-send.js";
 
 const consumerCredit = document.querySelector(`.consumer`);
@@ -32,11 +32,13 @@ const scaleBiggerConsumerHandler = () => {
   setSlyleDefaulForConsumer();
   let scaleControlNumber = parseInt(clearString(inputConsumerCreditCost.value), 10);
 
-  if (scaleControlNumber <= (scaleValueCostConsumerMax - scaleValueCostConsumerStep)) {
+  if (scaleControlNumber < scaleValueCostConsumerMin) {
+    inputConsumerCreditCost.value = prettifyRubbles(scaleValueCostConsumerMin);
+  } else if (scaleControlNumber <= (scaleValueCostConsumerMax - scaleValueCostConsumerStep)) {
     scaleControlNumber += scaleValueCostConsumerStep;
     inputConsumerCreditCost.value = prettifyRubbles(scaleControlNumber);
-    getCreditConsumerSum();
   }
+  getCreditConsumerSum();
 };
 
 const scaleSmallerConsumerHandler = () => {
@@ -44,11 +46,13 @@ const scaleSmallerConsumerHandler = () => {
   setSlyleDefaulForConsumer();
   let scaleControlNumber = parseInt(clearString(inputConsumerCreditCost.value), 10);
 
-  if (scaleControlNumber >= (scaleValueCostConsumerMin + scaleValueCostConsumerStep)) {
+  if (scaleControlNumber > scaleValueCostConsumerMax) {
+    inputConsumerCreditCost.value = prettifyRubbles(scaleValueCostConsumerMax);
+  } else if (scaleControlNumber >= (scaleValueCostConsumerMin + scaleValueCostConsumerStep)) {
     scaleControlNumber -= scaleValueCostConsumerStep;
     inputConsumerCreditCost.value = prettifyRubbles(scaleControlNumber);
-    getCreditConsumerSum();
   }
+  getCreditConsumerSum();
 };
 
 const setMinCreditTermConsumer = () => {
@@ -92,10 +96,10 @@ const creditConsumerCalculator = () => {
   inputConsumerCreditCost.addEventListener(`input`, changeConsumerCostInput);
   buttonBiggerConsumer.addEventListener(`click`, scaleBiggerConsumerHandler);
   buttonSmallerConsumer.addEventListener(`click`, scaleSmallerConsumerHandler);
-  rangeConsumerTerm.addEventListener(`change`, changeCreditTermForConsumer);
+  rangeConsumerTerm.addEventListener(`input`, changeCreditTermForConsumer);
   inputConsumerTermValue.addEventListener(`input`, changeInputConsumerTermValue);
   inputConsumerTermValue.addEventListener(`change`, minAndMaxTermConsumerHandler);
-  checkerSalaryProject.addEventListener(`click`, calculatePercentRateForConsumer);
+  checkerSalaryProject.addEventListener(`click`, setPercentValue);
 };
 
 export {

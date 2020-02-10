@@ -27,17 +27,21 @@ const rangeTermMin = Number(rangeTerm.getAttribute(`data-min`));
 const rangeTermMax = Number(rangeTerm.getAttribute(`data-max`));
 const offerForm = document.querySelector(`.offer form`);
 const inputCreditSum = offerForm.querySelector(`.offer__item input[name=credit-name]`);
+const inputCreditPercent = offerForm.querySelector(`.offer__item input[name=credit-percent]`);
 
 const scaleBiggerMortgageHandler = () => {
   closeRequestForm();
   setSlyleDefaulForMortgage();
   let scaleControlNumber = parseInt(clearString(inputMortgageCost.value), 10);
 
-  if (scaleControlNumber <= (scaleValueMax - scaleValueStep)) {
+  if (scaleControlNumber < scaleValueMin) {
+    inputMortgageCost.value = prettifyRubbles(scaleValueMin);
+  } else if (scaleControlNumber <= (scaleValueMax - scaleValueStep)) {
     scaleControlNumber += scaleValueStep;
     inputMortgageCost.value = prettifyRubbles(scaleControlNumber);
-    setPercentValue();
   }
+  setMinPercentValue();
+  setPercentValue();
 };
 
 const scaleSmallerMortgageHandler = () => {
@@ -45,13 +49,16 @@ const scaleSmallerMortgageHandler = () => {
   setSlyleDefaulForMortgage();
   let scaleControlNumber = parseInt(clearString(inputMortgageCost.value), 10);
 
-  if (scaleControlNumber >= (scaleValueMin + scaleValueStep)) {
+  if (scaleControlNumber > scaleValueMax) {
+    inputMortgageCost.value = prettifyRubbles(scaleValueMax);
+  } else if (scaleControlNumber >= (scaleValueMin + scaleValueStep)) {
     scaleControlNumber -= scaleValueStep;
     inputMortgageCost.value = prettifyRubbles(scaleControlNumber);
-    setPercentValue();
-    getCreditMortgageSum();
-    calculateMonthlyPayment();
   }
+  setMinPercentValue();
+  setPercentValue();
+  getCreditMortgageSum();
+  calculateMonthlyPayment();
 };
 
 const setMinContributionValue = () => {
@@ -66,6 +73,10 @@ const setMinContributionValue = () => {
 const setMinPercentValue = () => {
   rangeContributionPercent.value = `10`;
   percentSpanValue.innerHTML = `10%`;
+};
+
+const setMinPercentValueForOffer = () => {
+  inputCreditPercent.value = `9,40%`;
 };
 
 const setPercentValue = () => {
@@ -150,6 +161,11 @@ const minAndMaxTermHandler = () => {
   calculateMonthlyPayment();
 };
 
+const inputCostMortgageChange = () => {
+  setMinPercentValue();
+  setPercentValue();
+};
+
 const contributionPercentHandler = () => {
   setPercentValue();
   calculatePercentRate();
@@ -160,16 +176,17 @@ const creditMortgageCalculator = () => {
   setSlyleDefaulForMortgage();
   setMinContributionValue();
   setMinPercentValue();
+  setMinPercentValueForOffer();
   getCreditMortgageSum();
   calculateMonthlyPayment();
   setMinCreditTerm();
-  inputMortgageCost.addEventListener(`input`, setPercentValue);
+  inputMortgageCost.addEventListener(`input`, inputCostMortgageChange);
   buttonBiggerMortgage.addEventListener(`click`, scaleBiggerMortgageHandler);
   buttonSmallerMortgage.addEventListener(`click`, scaleSmallerMortgageHandler);
-  rangeContributionPercent.addEventListener(`change`, contributionPercentHandler);
+  rangeContributionPercent.addEventListener(`input`, contributionPercentHandler);
   inputMortgageContribution.addEventListener(`input`, changeInputContributionValue);
   inputMortgageContribution.addEventListener(`change`, minAndMaxUserContributionInput);
-  rangeTerm.addEventListener(`change`, changeCreditTerm);
+  rangeTerm.addEventListener(`input`, changeCreditTerm);
   inputTermValue.addEventListener(`input`, changeInputTermValue);
   inputTermValue.addEventListener(`change`, minAndMaxTermHandler);
 };
