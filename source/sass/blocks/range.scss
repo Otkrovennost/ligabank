@@ -23,6 +23,7 @@
   left: 4%;
   border: 0;
   background-color: transparent;
+  outline: none;
   cursor: pointer;
 
   @media ($mobile) {
@@ -64,7 +65,7 @@
 
   &:focus,
   &:hover {
-    opacity: 0.6;
+    opacity: 0.4;
     transition: 0.9s;
   }
 }
@@ -117,6 +118,16 @@
   background-color: transparent;
   outline: none;
   z-index: 1;
+
+  &:focus {
+    &::-webkit-slider-thumb {
+      box-shadow: 2px 2px 5px #000080;
+    }
+
+    &::-moz-range-thumb {
+      box-shadow: 2px 2px 5px #000080;
+    }
+  }
 }
 
 .range input[type="range"]::-webkit-slider-thumb {
