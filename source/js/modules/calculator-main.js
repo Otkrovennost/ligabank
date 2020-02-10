@@ -42,7 +42,10 @@ const hideCalculatorBlock = () => {
 
 const closeMenuOnOutsideClick = (el) => {
   let target = el.target;
-  console.log(target);
+  if (creditTypeMenu.classList.contains(`goal__list--active`) && !target.parentNode.parentNode.classList.contains(`credit__goal`)) {
+    closeCreditMenu();
+    document.removeEventListener(`click`, closeMenuOnOutsideClick);
+  }
 };
 
 const closeCreditMenu = () => {
