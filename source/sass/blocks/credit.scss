@@ -61,19 +61,26 @@
 
 .credit__goal {
   width: 100%;
+  margin-bottom: 13px;
   padding-right: 10%;
 
   @media ($tablet) {
+    margin: 0;
     padding: 0;
   }
 }
 
 .credit__calculator {
+  display: none;
   width: 100%;
-  padding-right: 10%;
+  padding: 36px 10% 0 0;
 
   @media ($tablet) {
-    padding: 0;
+    padding: 36px 0 0 0;
+  }
+
+  @media ($mobile) {
+    padding: 24px 0 0 0;
   }
 }
 
@@ -168,7 +175,7 @@
   }
 
   input:focus + label,
-  input:hover + label{
+  input:hover + label {
     opacity: 0.6;
   }
 
@@ -195,19 +202,19 @@
 .credit__request {
   display: none;
   width: 770px;
-  margin: 56px auto 0 auto;
-  padding: 64px 70px 70px;
+  margin: 58px auto 0;
+  padding: 63px 70px 82px;
   background-color: $color-bg-base;
 
   @media ($tablet) {
     margin-top: 0;
-    padding: 56px 0 70px 0;
+    padding: 56px 0 0 0;
     background-color: transparent;
   }
 
   @media ($mobile) {
     width: 290px;
-    padding: 44px 0 70px;
+    padding: 44px 0 0 0;
   }
 
   &--active {

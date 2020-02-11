@@ -5,7 +5,7 @@ import {
   closeRequestForm
 } from "./request.js";
 import {
-  getCreditConsumerSum, setPercentValue, checkerSalaryProject, setSlyleDefaulForConsumer
+  getCreditConsumerSum, setPercentValue, checkerSalaryProject, setSlyleDefaulForConsumer, cleanOfferInputs
 } from "./credit-consumer-send.js";
 
 const consumerCredit = document.querySelector(`.consumer`);
@@ -20,11 +20,17 @@ const scaleValueCostConsumerMax = Number(inputConsumerCreditCost.getAttribute(`d
 const scaleValueCostConsumerStep = Number(inputConsumerCreditCost.getAttribute(`data-step`));
 const rangeConsumerTermMin = Number(rangeConsumerTerm.getAttribute(`data-min`));
 const rangeConsumerTermMax = Number(rangeConsumerTerm.getAttribute(`data-max`));
+const offerForm = document.querySelector(`.offer form`);
+const inputCreditSum = offerForm.querySelector(`.offer__item input[name=credit-name]`);
 
 const changeConsumerCostInput = () => {
   setSlyleDefaulForConsumer();
   closeRequestForm();
   getCreditConsumerSum();
+  if (inputConsumerCreditCost.value === ` рублей`) {
+    inputCreditSum.value = inputConsumerCreditCost.value;
+    cleanOfferInputs();
+  }
 };
 
 const scaleBiggerConsumerHandler = () => {

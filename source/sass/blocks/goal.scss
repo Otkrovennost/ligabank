@@ -1,10 +1,5 @@
 .goal {
   position: relative;
-  margin: 0 0 35px 0;
-
-  @media ($mobile) {
-    margin: 0 0 24px 0;
-  }
 
   h3 {
     margin: 0 0 20px 0;
@@ -88,7 +83,7 @@
 
 .goal__link {
   display: block;
-  padding: 19px 23px;
+  padding: 18px 23px;
   text-align: left;
   border-bottom: 1px solid #c1c2ca;
 

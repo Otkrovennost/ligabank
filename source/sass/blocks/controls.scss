@@ -1,0 +1,122 @@
+.controls {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30px;
+  height: 105px;
+  bottom: 152px;
+  right: 31px;
+
+  @media ($tablet) {
+    width: 25px;
+    height: 90px;
+    bottom: 132px;
+    right: 54px;
+  }
+
+  @media ($mobile) {
+    width: 20px;
+    height: 75px;
+    bottom: 113px;
+    right: 7px;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+      transition: 0.9s;
+    }
+  }
+}
+
+.controls__scale {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 60px;
+  padding: 5px 5px 0 5px;
+  background-color: $color-bg-base;
+  border-radius: 100px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+
+  @media ($tablet) {
+    width: 25px;
+    height: 55px;
+  }
+
+  @media ($mobile) {
+    width: 35px;
+    height: 45px;
+  }
+
+  svg {
+    @media ($tablet) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.controls__control-more {
+  margin-bottom: 7px;
+
+  @media ($mobile) {
+    margin-bottom: 3px;
+  }
+}
+
+.controls .controls__control-less {
+  border-top: 1px solid #e5e5e5;
+
+  @media ($tablet) {
+    padding-top: 3px;
+  }
+
+  @media ($mobile) {
+    padding-top: 0;
+  }
+}
+
+.controls__location {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-top: auto;
+  background-color: $color-bg-base;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+
+  @media ($tablet) {
+    width: 25px;
+    height: 25px;
+  }
+
+  @media ($mobile) {
+    width: 20px;
+    height: 20px;
+  }
+
+  svg {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+
+    @media ($tablet) {
+      top: 8px;
+      left: 6px;
+    }
+
+    @media ($mobile) {
+      width: 10px;
+      height: 10px;
+      top: 6px;
+      left: 4px;
+    }
+  }
+}

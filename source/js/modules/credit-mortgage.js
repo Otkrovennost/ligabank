@@ -94,8 +94,8 @@ const setPercentValue = () => {
   calculatePercentRate();
 
   if (inputValue === ` рублей`) {
-    inputMortgageContribution.value = inputValue;
-    inputCreditSum.value = inputValue;
+    inputMortgageContribution.value = ` рублей`;
+    inputCreditSum.value = ` рублей`;
     setMinPercentValue();
     cleanOfferInputs();
   }
@@ -112,6 +112,12 @@ const changeInputContributionValue = () => {
   percentSpanValue.innerHTML = String(rangeContributionPercent.value) + ` %`;
   getCreditMortgageSum();
   calculateMonthlyPayment();
+
+  if (inputMortgageContribution.value === ` рублей`) {
+    inputCreditSum.value = ` рублей`;
+    setMinPercentValue();
+    cleanOfferInputs();
+  }
 };
 
 const minAndMaxUserContributionInput = () => {
@@ -146,6 +152,10 @@ const changeInputTermValue = () => {
   let inputTermCurrentValue = parseInt(clearString(inputTermValue.value), 10);
   rangeTerm.value = inputTermCurrentValue;
   calculateMonthlyPayment();
+
+  // if (inputTermValue.value === ` лет`) {
+  //   cleanOfferInputs();
+  // }
 };
 
 const minAndMaxTermHandler = () => {

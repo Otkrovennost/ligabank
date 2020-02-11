@@ -18,6 +18,11 @@ const checkerSalaryProject = consumerCredit.querySelector(`.consumer__checker in
 let percentDecline;
 let percentForCredit;
 
+const cleanOfferInputs = () => {
+  inputCreditMonthlyPayment.value = `рублей`;
+  inputCreditIncome.value = `рублей`;
+};
+
 const getCreditConsumerSum = () => {
   let inputCurrentValue = parseInt(clearString(inputConsumerCreditCost.value), 10);
   inputCreditSumLabel.innerHTML = creditOffer.consumer.creditName;
@@ -46,7 +51,8 @@ const calculatePercentRateForConsumer = () => {
     percentForCredit = 15 - percentDecline;
   }
   return percentForCredit;
-}
+};
+
 const setPercentValue = () => {
   let currentPercent;
   calculatePercentRateForConsumer();
@@ -111,5 +117,5 @@ const setSlyleDefaulForConsumer = () => {
 };
 
 export {
-  getCreditConsumerSum, setPercentValue, checkerSalaryProject, setSlyleDefaulForConsumer, issueRequestConsumerHandler
+  getCreditConsumerSum, setPercentValue, checkerSalaryProject, setSlyleDefaulForConsumer, issueRequestConsumerHandler, cleanOfferInputs
 };

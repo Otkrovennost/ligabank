@@ -60,6 +60,14 @@
       top: 0;
       left: 0;
       background-image: url("../img/bg/plus.svg");
+
+      @media ($tablet) {
+        left: 7px;
+      }
+
+      @media ($mobile) {
+        left: 0;
+      }
     }
   }
 

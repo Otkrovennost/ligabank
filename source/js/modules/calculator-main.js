@@ -20,6 +20,7 @@ import {
 const iconOpenMenu = document.querySelector(`.goal__icon`);
 const creditTypeMenu = document.querySelector(`.goal__list`);
 const linksCreditType = document.querySelectorAll(`.goal__link`);
+const creditCalculator = document.querySelector(`.credit__calculator`);
 const mortgageCredit = document.querySelector(`.mortgage`);
 const carLoanCredit = document.querySelector(`.car-loan`);
 const consumerCredit = document.querySelector(`.consumer`);
@@ -29,6 +30,7 @@ const creditGoal = document.querySelector(`[name = credit-goal]`);
 const requestCreditLink = document.querySelector(`.offer__link`);
 
 const hideAllCreditTypeBlock = () => {
+  creditCalculator.style.display = `none`;
   creditBlocks.forEach((creditBlock) => {
     creditBlock.classList.remove(`credit__block--active`);
   });
@@ -62,6 +64,7 @@ const openCreditTypeBlockHandler = () => {
       evt.preventDefault();
       closeCreditMenu();
       hideAllCreditTypeBlock();
+      creditCalculator.style.display = `block`;
 
       creditGoal.value = linkCreditType.innerHTML;
 

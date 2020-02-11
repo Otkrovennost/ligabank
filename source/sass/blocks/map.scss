@@ -1,15 +1,16 @@
 .map {
+  position: relative;
   margin-bottom: 108px;
   padding-top: 84px;
 
   @media ($tablet) {
     margin-bottom: 82px;
-    padding: 0 45px;
+    padding: 68px 45px 0 45px;
   }
 
   @media ($mobile) {
     margin-bottom: 60px;
-    padding: 29px 0 0 0;
+    padding: 54px 0 0 0;
   }
 
   h2 {
@@ -30,20 +31,20 @@
       line-height: 31px;
     }
   }
-}
 
-.map__filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin: 0;
-  padding: 30px;
-  background-color: $color-bg-base;
-  list-style: none;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: $color-bg-base;
+    list-style: none;
 
-  @media ($mobile) {
-    padding: 18px;
+    @media ($mobile) {
+      padding: 18px;
+    }
   }
 }
 
@@ -56,7 +57,8 @@
   line-height: 20px;
 
   @media ($mobile) {
-    width: auto;
+    width: 80px;
+    padding-left: 26px;
   }
 
   label {
@@ -66,29 +68,67 @@
   input + label::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 19px;
     box-sizing: border-box;
     width: 16px;
     height: 16px;
     border: 1px solid $color-design;
     border-radius: 2px;
+
+    @media ($mobile) {
+      left: 2px;
+    }
   }
 
   input:checked + label::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 19px;
     width: 16px;
     height: 16px;
     background-image: url("../img/bg/icon-checkbox.svg");
     background-repeat: no-repeat;
+
+    @media ($mobile) {
+      left: 2px;
+    }
   }
 
   input:focus + label::before,
   input:hover + label::before {
     border: 1px solid #003399;
+  }
+
+  &--uis {
+    @media ($mobile) {
+      padding-left: 40px;
+    }
+
+    input + label::before {
+      @media ($mobile) {
+        left: 14px;
+      }
+    }
+
+    input:checked + label::after {
+      @media ($mobile) {
+        left: 14px;
+      }
+    }
+  }
+
+  &--europe {
+    padding-left: 33px;
+
+    input + label::before {
+      left: 6px;
+    }
+
+    input:checked + label::after {
+      left: 6px;
+    }
   }
 }
 

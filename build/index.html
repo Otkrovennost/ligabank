@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Лига-банк - предложения по различным видам кредита, онлайн-калькулятор.">
   <title>Ligabank</title>
   <link rel="preload" href="fonts/roboto.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/robotomedium.woff2" as="font" crossorigin="anonymous">
@@ -445,21 +446,45 @@
       </section>
       <section class="map container">
         <h2>Отделения Лига Банка</h2>
-        <ul class="map__filters">
-          <li class="map__filters-item">
-            <input class="visually-hidden" id="check-first" name="check-first" type="checkbox">
-            <label for="check-first">Россия</label>
-          </li>
-          <li class="map__filters-item">
-            <input class="visually-hidden" id="check-second" name="check-second" type="checkbox">
-            <label for="check-second">СНГ</label>
-          </li>
-          <li class="map__filters-item">
-            <input class="visually-hidden" id="check-third" name="check-third" type="checkbox">
-            <label for="check-third">Европа</label>
-          </li>
-        </ul>
+        <form>
+          <div class="map__filters-item">
+            <input class="visually-hidden" id="filter-russia" name="region" value="russia" type="checkbox" checked="">
+            <label for="filter-russia">Россия</label>
+          </div>
+          <div class="map__filters-item map__filters-item--uis">
+            <input class="visually-hidden" id="filter-uis" name="region" value="uis" type="checkbox" checked="">
+            <label for="filter-uis">СНГ</label>
+          </div>
+          <div class="map__filters-item map__filters-item--europe">
+            <input class="visually-hidden" id="filter-europe" name="region" value="europe" type="checkbox">
+            <label for="filter-europe">Европа</label>
+          </div>
+        </form>
         <div class="map__block" id="map">
+        </div>
+        <div class="map__controls controls">
+          <div class="controls__scale">
+            <button class="controls__control-more">
+              <svg width="12" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-plus"></use>
+              </svg>
+              <span class="visually-hidden">Увеличить масштаб</span>
+            </button>
+            <button class="controls__control-less">
+              <svg width="12" height="2">
+                <use xlink:href="img/sprite_auto.svg#icon-minus"></use>
+              </svg>
+              <span class="visually-hidden">Уменьшить масштаб</span>
+            </button>
+          </div>
+          <div class="controls__location">
+            <button class="controls__arrow">
+              <svg width="12" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+              </svg>
+              <span class="visually-hidden">Разрешить доступ к местоположению</span>
+            </button>
+          </div>
         </div>
       </section>
     </main>
@@ -576,8 +601,10 @@
   <template id="placemark">
     <div class="map-placemark"></div>
   </template>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=32d594d9-77f2-4342-ae7b-bece961ea5c6&lang=ru_RU"></script>
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
+
 </body>
 
 </html>

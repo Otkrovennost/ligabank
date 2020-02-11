@@ -107,6 +107,12 @@ const changeInputContributionForCarLoan = () => {
   percentCarLoanSpanValue.innerHTML = String(rangeCarLoanContributionPercent.value) + ` %`;
   getCreditCarLoanSum();
   calculateMonthlyPaymentForCarLoan();
+
+  if (inputCarLoanContribution.value === ` рублей`) {
+    inputCreditSum.value = ` рублей`;
+    setMinPercentValueForCarLoan();
+    cleanOfferInputs();
+  }
 };
 
 const minAndMaxUserContibutionForCarLoanHandler = () => {

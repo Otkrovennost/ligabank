@@ -16,6 +16,12 @@ import {
 import {
   requestForm, submitRequestForm, changeFormInputsValue
 } from "./request.js";
+import {
+  placeMarks
+} from "./data.js";
+import {
+  marksFilterHandler
+} from "./map-filters.js";
 const openLoginLink = document.querySelector(`.nav__user-link`);
 const navItemLinks = document.querySelectorAll(`.nav__link`);
 const loginFormBlock = document.querySelector(`.popup-login`);
@@ -23,6 +29,8 @@ const submitForm = loginFormBlock.querySelector(`form`);
 const creditCalculatorBlock = document.querySelector(`.credit`);
 const creditBlockInputsForRubbles = document.querySelectorAll(`.credit__item input[data-input-value=rubbles]`);
 const creditBlockInputsForYears = document.querySelectorAll(`.credit__item input[data-input-value=years]`);
+const mapBlock = document.querySelector(`.map__block`);
+const mapFiltersBlock = document.querySelector(`.map form`);
 
 navMain.classList.add(`nav--closed`);
 
@@ -67,3 +75,47 @@ if (requestForm) {
   changeFormInputsValue();
   requestForm.addEventListener(`submit`, submitRequestForm);
 }
+
+function init() {
+  let myMap = new ymaps.Map(mapBlock.id, {
+    center: [53.8, 38.6],
+    zoom: 3,
+    controls: [],
+    behavior: [`drag`]
+  });
+
+  let marks;
+  let marksCollection;
+
+  const renderPin = () => {
+    myMap.geoObjects.remove(marksCollection);
+    marksCollection = new ymaps.GeoObjectCollection();
+    marks = marksFilterHandler(placeMarks);
+
+    if (marks.length !== 0) {
+      marks.forEach((mark) => {
+        let myPlacemark = new ymaps.Placemark([mark.latitude, mark.longitude], {
+          hintContent: mark.hintName
+        }, {
+          iconLayout: `default#image`,
+          iconImageHref: `img/content/location.png`,
+          iconImageSize: [35, 40],
+          iconImageOffset: [-17, -20]
+        });
+        marksCollection.add(myPlacemark);
+      });
+      myMap.geoObjects.add(marksCollection);
+      myMap.setBounds(marksCollection.getBounds());
+    }
+  };
+
+  renderPin();
+
+  const filterChangeHandler = () => {
+    renderPin();
+  };
+
+  mapFiltersBlock.addEventListener(`change`, filterChangeHandler);
+}
+
+ymaps.ready(init);
