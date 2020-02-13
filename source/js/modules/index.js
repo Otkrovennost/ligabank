@@ -24,6 +24,7 @@ import {
 } from "./map-filters.js";
 const openLoginLink = document.querySelector(`.nav__user-link`);
 const navItemLinks = document.querySelectorAll(`.nav__link`);
+const teasersLinks = document.querySelectorAll(`.teasers__item`);
 const loginFormBlock = document.querySelector(`.popup-login`);
 const submitForm = loginFormBlock.querySelector(`form`);
 const creditCalculatorBlock = document.querySelector(`.credit`);
@@ -39,6 +40,12 @@ if (navMain) {
 
   navItemLinks.forEach(function (elem) {
     elem.addEventListener(`click`, openMenu);
+    scrollToContent();
+  });
+}
+
+if (teasersLinks) {
+  teasersLinks.forEach(function (elem) {
     scrollToContent();
   });
 }

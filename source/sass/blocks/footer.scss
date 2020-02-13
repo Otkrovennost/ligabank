@@ -7,7 +7,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 48px;
+  padding-top: 47px;
   padding-bottom: 60px;
 
   @media ($tablet) {
@@ -143,12 +143,12 @@
   position: relative;
   width: 41%;
   box-sizing: border-box;
-  padding: 11px 0 0 0;
+  padding: 9px 0 0 0;
 
   @media ($tablet) {
     width: 100%;
-    margin-bottom: 11px;
     padding: 11px 0 0 0;
+    margin-bottom: 11px;
   }
 
   @media ($mobile) {
@@ -189,7 +189,7 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    top: 13px;
+    top: 9px;
     left: 30px;
     background-repeat: no-repeat;
 
@@ -224,7 +224,7 @@
   justify-content: space-between;
   width: 17%;
   margin: 0;
-  padding: 13px 0 0 0;
+  padding: 10px 0 0 4px;
   list-style: none;
 
   @media ($tablet) {
