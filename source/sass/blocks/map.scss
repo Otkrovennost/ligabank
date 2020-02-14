@@ -42,6 +42,10 @@
     background-color: $color-bg-base;
     list-style: none;
 
+    @media ($tablet) {
+      padding: 32px;
+    }
+
     @media ($mobile) {
       padding: 18px;
     }

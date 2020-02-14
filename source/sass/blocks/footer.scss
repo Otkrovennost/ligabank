@@ -12,13 +12,14 @@
 
   @media ($tablet) {
     position: relative;
+    padding-top: 45px;
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 110px;
   }
 
   @media ($mobile) {
-    padding: 30px 15px;
+    padding: 33px 15px;
   }
 
   span {
@@ -126,7 +127,7 @@
 
 .footer__nav-link {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .footer__contacts {
@@ -152,8 +153,8 @@
   }
 
   @media ($mobile) {
-    margin-bottom: 3px;
-    padding: 15px 0 0 0;
+    margin-bottom: 0;
+    padding: 16px 0 0 0;
   }
 
   span {
@@ -194,6 +195,7 @@
     background-repeat: no-repeat;
 
     @media ($tablet) {
+      top: 13px;
       left: 49px;
     }
 
@@ -229,12 +231,12 @@
 
   @media ($tablet) {
     width: 124px;
-    margin-left: 41px;
+    margin-left: 36px;
     padding-top: 27px;
   }
 
   @media ($mobile) {
-    margin-left: -10px;
-    padding-top: 23px;
+    margin-left: -14px;
+    padding-top: 21px;
   }
 }

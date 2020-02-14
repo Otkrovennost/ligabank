@@ -83,46 +83,58 @@ if (requestForm) {
   requestForm.addEventListener(`submit`, submitRequestForm);
 }
 
-function init() {
-  let myMap = new ymaps.Map(mapBlock.id, {
-    center: [53.8, 38.6],
-    zoom: 3,
-    controls: [],
-    behavior: [`drag`]
-  });
+const initMap = () => {
+  ymaps.ready(init);
+  function init() {
+    let myMap = new ymaps.Map(mapBlock.id, {
+      center: [53.8, 38.6],
+      zoom: 3,
+      controls: [],
+      behavior: [`drag`]
+    });
 
-  let marks;
-  let marksCollection;
+    let marks;
+    let marksCollection;
 
-  const renderPin = () => {
-    myMap.geoObjects.remove(marksCollection);
-    marksCollection = new ymaps.GeoObjectCollection();
-    marks = marksFilterHandler(placeMarks);
+    const renderPin = () => {
+      myMap.geoObjects.remove(marksCollection);
+      marksCollection = new ymaps.GeoObjectCollection();
+      marks = marksFilterHandler(placeMarks);
 
-    if (marks.length !== 0) {
-      marks.forEach((mark) => {
-        let myPlacemark = new ymaps.Placemark([mark.latitude, mark.longitude], {
-          hintContent: mark.hintName
-        }, {
-          iconLayout: `default#image`,
-          iconImageHref: `img/content/location.png`,
-          iconImageSize: [35, 40],
-          iconImageOffset: [-17, -20]
+      if (marks.length !== 0) {
+        marks.forEach((mark) => {
+          let myPlacemark = new ymaps.Placemark([mark.latitude, mark.longitude], {
+            hintContent: mark.hintName
+          }, {
+            iconLayout: `default#image`,
+            iconImageHref: `img/content/location.png`,
+            iconImageSize: [35, 40],
+            iconImageOffset: [-17, -20]
+          });
+          marksCollection.add(myPlacemark);
         });
-        marksCollection.add(myPlacemark);
-      });
-      myMap.geoObjects.add(marksCollection);
-      myMap.setBounds(marksCollection.getBounds());
-    }
-  };
+        myMap.geoObjects.add(marksCollection);
+        myMap.setBounds(marksCollection.getBounds());
+      }
+    };
 
-  renderPin();
-
-  const filterChangeHandler = () => {
     renderPin();
-  };
 
-  mapFiltersBlock.addEventListener(`change`, filterChangeHandler);
-}
+    const filterChangeHandler = () => {
+      renderPin();
+    };
 
-ymaps.ready(init);
+    mapFiltersBlock.addEventListener(`change`, filterChangeHandler);
+  }
+};
+
+const documentScrollHandler = (evt) => {
+  const map = document.querySelector(`.map`);
+  const topPos = map.getBoundingClientRect().top;
+  if (topPos <= 400) {
+    initMap();
+    document.removeEventListener(`scroll`, documentScrollHandler);
+  }
+};
+
+document.addEventListener(`scroll`, documentScrollHandler);
