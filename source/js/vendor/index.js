@@ -1,4 +1,5 @@
-import IMask from 'imask';
+// import IMask from 'imask';
+import IMask from "./imask-min.js";
 
 import {
   sliderAnimation, addSwiperServices
