@@ -19,7 +19,7 @@
   }
 
   @media ($mobile) {
-    padding: 33px 15px;
+    padding: 34px 15px;
   }
 
   span {
@@ -114,7 +114,7 @@
 
   @media ($mobile) {
     width: 100%;
-    padding: 28px 0 0 0;
+    padding: 27px 0 0 0;
     font-size: 14px;
     line-height: 140%;
   }
@@ -212,10 +212,15 @@
   &--tel {
     @media ($tablet) {
       margin-bottom: 0;
+      padding-left: 4px;
     }
 
     &::before {
       background-image: url("../img/bg/icon-tel.svg");
+    }
+
+    @media ($mobile) {
+      padding-left: 4px;
     }
   }
 }
